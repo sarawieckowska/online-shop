@@ -1,0 +1,27 @@
+h1 {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-primary {
+  background-color: #004b49;
+  border-color: #004b49;
+}
+
+.form-check {
+  margin-bottom: 15px;
+}
+
+.form-check-label {
+  font-size: 13px;
+}
+
+.form-check-input {
+  margin-top: 6px;
+}
+
+form {
+  width: 150%;
+  margin-left: -350%;
+}
