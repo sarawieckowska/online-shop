@@ -10,18 +10,14 @@ import {User} from './models/User';
 })
 export class AppComponent implements OnInit {
   user: User;
-  isAccepted: any = () => {
-    const auth = this.injector.get(AuthService);
-    const user = auth.getUser();
-    return user.isCookiesAccepted;
+  isAccepted: boolean;
+  onCookiesAccepted(accepted: boolean) {
+    this.isAccepted = accepted;
   }
 
   constructor(private injector: Injector) {}
 
   ngOnInit() {
-    const Auth = this.injector.get(AuthService);
-    if (Auth.isLoggedIn()) {
-      this.user = Auth.getUser();
-    }
+    this.isAccepted = false;
   }
 }

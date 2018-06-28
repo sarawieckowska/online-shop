@@ -23,11 +23,14 @@ import { HelpComponent } from './help/help.component';
 import { ReturnPolicyComponent } from './return-policy/return-policy.component';
 import { DeliveryMethodsComponent } from './delivery-methods/delivery-methods.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AppBootstrapModule } from './AppBootstrapModule';
+
 
 @NgModule({
   imports: [
     AppRoutingModule,
-    BrowserModule
+    BrowserModule,
+    AppBootstrapModule
   ],
   declarations: [
     AppComponent,

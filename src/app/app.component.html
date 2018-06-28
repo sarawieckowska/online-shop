@@ -1,5 +1,5 @@
 <div class="container">
-  <app-cookies *ngIf="!isAccepted()"></app-cookies>
+  <app-cookies *ngIf="!isAccepted" (cookiesAccepted)="onCookiesAccepted($event)"></app-cookies>
   <div class="row">
     <div class="col">
       <img src="assets/img/logo.png" class="logo" alt="Shopper Logo">
@@ -14,23 +14,10 @@
         </div>
       </div>
     </div>
-    <div class="col-2">
-      <nav>
-        <div class="dropdown show rightAlign">
-          <a class="btn dropdown-toggle" routerLink="/myAccount" role="button" id="dropdownMenuLink"
-             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="categories">My Account</span>
-          </a>
-        </div>
-      </nav>
-      <router-outlet></router-outlet>
-    </div>
+    <app-my-account></app-my-account>
   </div>
+  <router-outlet></router-outlet>
 </div>
-<div class="separator"></div>
-<div class="row"></div>
-<div class="row"></div>
-<div class="separator"></div>
 <div class="container">
   <app-footer></app-footer>
 </div>

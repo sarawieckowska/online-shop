@@ -14,8 +14,6 @@ import { CookieNoticeComponent } from './cookie-notice/cookie-notice.component';
 const routes: Routes = [
   { path: 'login', component: SignInComponent },
   { path: 'register', component: SignUpComponent },
-  { path: 'myAccount', component: MyAccountComponent },
-  { path: 'categories', component: CategoriesComponent },
   { path: 'cookies', component: CookiesComponent },
   { path: 'details', component: AccountDetailsComponent },
   { path: 'basket', component: BasketComponent },

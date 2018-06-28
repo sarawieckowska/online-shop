@@ -1,4 +1,4 @@
-import { Component, Injector, OnInit } from '@angular/core';
+import { Component, Injector, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { AuthService } from '../services/AuthService';
 import { User } from '../models/User';
 
@@ -10,9 +10,10 @@ import { User } from '../models/User';
 })
 export class CookiesComponent implements OnInit {
   user: User;
+  @Output() cookiesAccepted = new EventEmitter<boolean>();
   acceptCookies: any = () => {
     this.user.acceptCookies();
-    this.injector.get(AuthService).setUser(this.user);
+    this.cookiesAccepted.emit(this.user.isCookiesAccepted);
   };
   constructor (private injector: Injector) {}
 
