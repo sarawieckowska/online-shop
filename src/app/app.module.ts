@@ -19,6 +19,10 @@ import { CareersComponent } from './careers/careers.component';
 import { PolicyComponent } from './policy/policy.component';
 import { UserAgreementComponent } from './user-agreement/user-agreement.component';
 import { CookieNoticeComponent } from './cookie-notice/cookie-notice.component';
+import { HelpComponent } from './help/help.component';
+import { ReturnPolicyComponent } from './return-policy/return-policy.component';
+import { DeliveryMethodsComponent } from './delivery-methods/delivery-methods.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   imports: [
@@ -42,7 +46,11 @@ import { CookieNoticeComponent } from './cookie-notice/cookie-notice.component';
     CareersComponent,
     PolicyComponent,
     UserAgreementComponent,
-    CookieNoticeComponent
+    CookieNoticeComponent,
+    HelpComponent,
+    ReturnPolicyComponent,
+    DeliveryMethodsComponent,
+    ContactUsComponent
   ],
   bootstrap: [AppComponent]
 })
