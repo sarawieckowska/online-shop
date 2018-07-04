@@ -1,0 +1,14 @@
+.dropdownElem {
+  color: #006663;
+  font-size: 0.8rem;
+  padding: 5px 0 5px 15px;
+}
+
+li a {
+  text-decoration: none;
+  color: #006663;
+}
+
+.dropdown-menu {
+  padding-right: 0;
+}

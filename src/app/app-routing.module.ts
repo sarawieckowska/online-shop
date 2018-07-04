@@ -1,24 +1,28 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { SignInComponent } from './sign-in/sign-in.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
-import { MyAccountComponent } from './my-account/my-account.component';
-import { CategoriesComponent } from './categories/categories.component';
-import { CookiesComponent } from './cookies/cookies.component';
-import { AccountDetailsComponent } from './account-details/account-details.component';
-import { BasketComponent } from './basket/basket.component';
-import { HistoryComponent } from './history/history.component';
-import { CookieNoticeComponent } from './cookie-notice/cookie-notice.component';
+import { SignInComponent } from './myAccount/sign-in/sign-in.component';
+import { SignUpComponent } from './myAccount/sign-up/sign-up.component';
+import {CompanyInfoComponent} from './main/footerComponents/company-info/company-info.component';
+import {PolicyComponent} from './main/footerComponents/policy/policy.component';
+import {UserAgreementComponent} from './main/footerComponents/user-agreement/user-agreement.component';
+import {CookieNoticeComponent} from './main/cookie-notice/cookie-notice.component';
+import {HelpComponent} from './main/footerComponents/help/help.component';
+import {ReturnPolicyComponent} from './main/footerComponents/return-policy/return-policy.component';
+import {DeliveryMethodsComponent} from './main/footerComponents/delivery-methods/delivery-methods.component';
+import {ContactUsComponent} from './main/footerComponents/contact-us/contact-us.component';
 
 const routes: Routes = [
   { path: 'login', component: SignInComponent },
   { path: 'register', component: SignUpComponent },
-  { path: 'cookies', component: CookiesComponent },
-  { path: 'details', component: AccountDetailsComponent },
-  { path: 'basket', component: BasketComponent },
-  { path: 'history', component: HistoryComponent },
-  { path: 'cookieNotice', component: CookieNoticeComponent },
+  { path: 'company', component: CompanyInfoComponent },
+  { path: 'policies', component: PolicyComponent },
+  { path: 'user-agreement', component: UserAgreementComponent },
+  { path: 'cookie-notice', component: CookieNoticeComponent },
+  { path: 'help', component: HelpComponent },
+  { path: 'return-policy', component: ReturnPolicyComponent },
+  { path: 'delivery-methods', component: DeliveryMethodsComponent },
+  { path: 'contact-us', component: ContactUsComponent },
 ];
 
 @NgModule({

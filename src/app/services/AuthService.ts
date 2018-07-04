@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { User } from '../models/User';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class AuthService {
   User: User = new User({});

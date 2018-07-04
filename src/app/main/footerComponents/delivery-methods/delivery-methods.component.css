@@ -1,0 +1,19 @@
+.row {
+  margin: 50px 230px 20px 230px;
+}
+
+h2 {
+  color: #004b49;
+  margin: auto;
+  padding: 30px 0 40px 0;
+  text-align: center;
+}
+
+p {
+  font-size: .9rem;
+}
+
+ul li {
+  font-size: 0.85rem;
+  line-height: 2.7rem;
+}
