@@ -10,19 +10,17 @@
   </div>
 </div>
 -->
-<div class="col">
+<div>
   <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <ul class="nav navbar-nav">
-        <li class="dropdown" dropdown><a class="rightAlign" dropdownToggle role="button">My Account<span class="caret"></span></a>
-          <ul *dropdownMenu class="dropdown-menu">
-            <li class="dropdownElem"><a routerLink="/login">Login</a></li>
-            <li class="dropdownElem"><a routerLink="/register">Register</a></li>
-            <li class="dropdownElem"><a routerLink="/details">Account Details</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+    <ul class="nav navbar-nav">
+      <li class="dropdown" dropdown><a dropdownToggle role="button">My Account<span class="caret"></span></a>
+        <ul *dropdownMenu class="dropdown-menu">
+          <li class="dropdownElem"><a routerLink="/login">Login</a></li>
+          <li class="dropdownElem"><a routerLink="/register">Register</a></li>
+          <li class="dropdownElem"><a routerLink="/details">Account Details</a></li>
+        </ul>
+      </li>
+    </ul>
   </nav>
 </div>
 <!--

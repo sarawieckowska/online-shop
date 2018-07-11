@@ -1,5 +1,5 @@
 .row {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .colorButton {
@@ -10,12 +10,26 @@
   margin-left: 0;
 }
 
-.categoryButton {
-  background: white;
+.colorButton:hover {
   color: #004b49;
+  background-color: #F7F7F7;
+  border-color: #004b49;
+}
+
+.categoryButton {
   border-radius: 0;
 }
 
+.btn-outline-success:not(:disabled):not(.disabled).active, .btn-outline-success:not(:disabled):not(.disabled):active, .show>.btn-outline-success.dropdown-toggle {
+  color: #004b49;
+  background-color: #F7F7F7;
+  border-color: #004b49;
+}
+
 .logo {
-  margin-top: -20px;
+  margin: -20px 40px 0 50px;
+}
+
+.wider {
+  margin-left: 70px;
 }

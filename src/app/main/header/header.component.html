@@ -1,16 +1,20 @@
 <div class="row">
   <div class="col">
-    <img src="assets/img/logo.png" class="logo" alt="Shopper Logo">
+    <img src="assets/img/logo.png" class="logo" alt="Shopper Logo" height="65" width="260">
   </div>
   <div class="col-6">
     <div class="input-group">
       <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="What are you looking for?">
       <div class="input-group-append">
-        <button class="btn btn-outline-secondary dropdown-toggle categoryButton" routerLink="/categories"
+        <button class="btn btn-outline-secondary dropdown-toggle colorButton categoryButton" routerLink="/categories"
                 type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</button>
         <button class="btn btn-outline-success my-2 my-sm-0 colorButton" type="submit">Search</button>
       </div>
     </div>
   </div>
-  <app-my-account></app-my-account>
+  <div class="col">
+    <div class="wider">
+      <app-my-account></app-my-account>
+    </div>
+  </div>
 </div>

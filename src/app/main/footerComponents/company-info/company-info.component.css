@@ -11,3 +11,24 @@ h1, h5 {
 p {
   font-size: .9rem;
 }
+
+.colorButton {
+  color: #F7F7F7;
+  font-size: 1.1vw;
+  background-color: #004b49;
+  border-color: #004b49;
+  margin-left: 0;
+}
+
+.categoryButton {
+  background: white;
+  color: #004b49;
+  border-radius: 0;
+}
+
+button {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+}
