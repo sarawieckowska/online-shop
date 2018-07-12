@@ -4,15 +4,15 @@
 
 .colorButton {
   color: #F7F7F7;
-  font-size: 1.1vw;
-  background-color: #004b49;
-  border-color: #004b49;
-  margin-left: 0;
+  font-size: 1rem;
+  background-color: #006663;
+  border-color: #006663;
+  margin-left: -75px;
 }
 
 .colorButton:hover {
-  color: #004b49;
-  background-color: #F7F7F7;
+  color: #F7F7F7;
+  background-color: #004b49;
   border-color: #004b49;
 }
 
@@ -20,16 +20,18 @@
   border-radius: 0;
 }
 
-.btn-outline-success:not(:disabled):not(.disabled).active, .btn-outline-success:not(:disabled):not(.disabled):active, .show>.btn-outline-success.dropdown-toggle {
-  color: #004b49;
-  background-color: #F7F7F7;
-  border-color: #004b49;
-}
-
 .logo {
   margin: -20px 40px 0 50px;
 }
+.inlineBlock {
+  display: inline-block;
+}
 
-.wider {
-  margin-left: 70px;
+.col, .col-4 {
+  padding: 0;
+}
+
+.col-4 {
+  margin-left: 40px;
+  margin-right: -10px;
 }
