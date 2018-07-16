@@ -1,40 +1,24 @@
 @import '../main';
+@import '../_margin';
+@import '../_img';
 
-a {
-  color: #004b49;
-}
-
-li {
-  list-style-type: none;
-  font-size: .8rem;
-  padding: 6px 0;
-}
-
-li a {
-  text-decoration: none;
-}
-
-li a:hover {
-  font-weight: bold;
+ul {
+  li {
+    list-style-type: none;
+    font-size: $list-font;
+    padding: 6px 0;
+  }
+  a {
+    text-decoration: none;
+    color: $primary-color;
+  }
+  a:hover {
+    font-weight: bold;
+    color: $secondary-color
+  }
 }
 
 h6 {
   font-weight: bold;
-  font-size: 1rem;
-}
-
-.topMargin {
-  margin-top: 20px;
-}
-
-.social {
-  padding: 5px;
-}
-
-.toRight {
-  margin-left: 28px;
-}
-
-.logo {
-  margin-top: 40px;
+  font-size: $header-6-font;
 }

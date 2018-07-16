@@ -6,8 +6,8 @@ $background-color: #F7F7F7;
 $primary-color: #006663;
 $secondary-color: #004b49;
 $list-font: .8rem;
+$p-font: .9rem;
 $header-6-font: 1rem;
-
 
 .separator {
   background: #ddd;
@@ -22,4 +22,10 @@ $header-6-font: 1rem;
 body {
   background-color: $background-color;
   font-family: $font-stack;
+}
+
+h1, h5 {
+  color: $secondary-color;
+  margin: auto;
+  padding: 30px 0 20px 0;
 }

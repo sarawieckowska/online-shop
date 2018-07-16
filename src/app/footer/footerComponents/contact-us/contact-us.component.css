@@ -12,11 +12,6 @@ textarea {
   resize: none;
 }
 
-.btn-primary {
-  background-color: #004b49;
-  border-color: #004b49;
-}
-
 .central {
   position: relative;
   width: 35%;

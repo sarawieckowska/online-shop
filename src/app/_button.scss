@@ -1,0 +1,23 @@
+@import 'main.scss';
+@import '_margin.scss';
+@import '_img.scss';
+
+button {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+}
+
+.main-button {
+  color: $background-color;
+  font-size: $list-font;
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+  margin-left: 0;
+}
+
+.btn-primary {
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+}

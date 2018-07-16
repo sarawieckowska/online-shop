@@ -20,7 +20,7 @@ ol li, .smallFont {
   font-size: .85rem;
 }
 
-.colorButton {
+.main-button {
   color: #F7F7F7;
   font-size: 1.1vw;
   background-color: #004b49;
@@ -28,7 +28,7 @@ ol li, .smallFont {
   margin-left: 0;
 }
 
-.colorButton:hover {
+.main-button:hover {
   color: #004b49;
   background-color: #F7F7F7;
   border-color: #004b49;
