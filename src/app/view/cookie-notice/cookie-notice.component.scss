@@ -1,0 +1,21 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '../../main.scss';
+
+.row {
+  margin: 50px 220px;
+}
+
+h1, h3 {
+  color: #004b49;
+  margin: auto;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: .9rem;
+}
+
+ul li, ol li {
+  font-size: .8rem;
+}

@@ -5,7 +5,7 @@ import {User} from './models/User';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./main.scss'],
   providers: [AuthService]
 })
 export class AppComponent implements OnInit {

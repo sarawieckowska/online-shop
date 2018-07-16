@@ -1,0 +1,37 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '../../../main.scss';
+
+.row {
+  margin: 50px 200px;
+}
+
+h1, h5 {
+  color: #004b49;
+  margin: auto;
+  padding: 30px 0 20px 0;
+}
+
+p {
+  font-size: .9rem;
+}
+
+.colorButton {
+  color: $background-color;
+  font-size: 1.1vw;
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+  margin-left: 0;
+}
+
+.categoryButton {
+  background: white;
+  color: #004b49;
+  border-radius: 0;
+}
+
+button {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+}

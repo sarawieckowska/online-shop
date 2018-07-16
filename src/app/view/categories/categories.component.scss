@@ -1,0 +1,59 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '../../main';
+
+.dropdownElem {
+  color: $primary-color;
+  font-size: 0.8rem;
+  padding: 5px 0 5px 15px;
+}
+
+.dropdownElem:hover {
+  font-weight: bold;
+}
+
+ul li > a, .category-button {
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  color: #F7F7F7;
+}
+
+ul li ul li a {
+  text-decoration: none;
+  color: #006663;
+  margin-top: 0;
+}
+
+.category-button {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: #006663;
+  padding: .45rem .75rem;;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  color: #F7F7F7;
+  background-color: #006663;
+  margin-left: 0;
+}
+
+.category-button:hover {
+  color: #F7F7F7;
+  background-color: #004b49;
+  border-color: #004b49;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.dropdown-menu {
+  margin: 0;
+}

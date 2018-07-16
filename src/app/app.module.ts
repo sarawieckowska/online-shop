@@ -5,28 +5,29 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { SignInComponent } from './myAccount/sign-in/sign-in.component';
-import { SignUpComponent } from './myAccount/sign-up/sign-up.component';
-import { BasketComponent } from './myAccount/myAccountComponents/basket/basket.component';
-import { AccountDetailsComponent } from './myAccount/myAccountComponents/account-details/account-details.component';
-import { HistoryComponent } from './myAccount/myAccountComponents/history/history.component';
-import { PaymentComponent } from './myAccount/myAccountComponents/payment/payment.component';
-import { MyAccountComponent } from './myAccount/my-account/my-account.component';
-import { CategoriesComponent } from './main/categories/categories.component';
-import { CookiesComponent } from './main/footerComponents/cookies/cookies.component';
-import { FooterComponent } from './main/footer/footer.component';
-import { CompanyInfoComponent } from './main/footerComponents/company-info/company-info.component';
-import { NewsComponent } from './main/footerComponents/news/news.component';
-import { CareersComponent } from './main/footerComponents/careers/careers.component';
-import { PolicyComponent } from './main/footerComponents/policy/policy.component';
-import { UserAgreementComponent } from './main/footerComponents/user-agreement/user-agreement.component';
-import { CookieNoticeComponent } from './main/cookie-notice/cookie-notice.component';
-import { HelpComponent } from './main/footerComponents/help/help.component';
-import { ReturnPolicyComponent } from './main/footerComponents/return-policy/return-policy.component';
-import { DeliveryMethodsComponent } from './main/footerComponents/delivery-methods/delivery-methods.component';
-import { ContactUsComponent } from './main/footerComponents/contact-us/contact-us.component';
+import { SignInComponent } from './view/sign-in/sign-in.component';
+import { SignUpComponent } from './view/sign-up/sign-up.component';
+import { BasketComponent } from './view/basket/basket.component';
+import { AccountDetailsComponent } from './view/account-details/account-details.component';
+import { HistoryComponent } from './view/history/history.component';
+import { PaymentComponent } from './view/payment/payment.component';
+import { MyAccountComponent } from './view/my-account/my-account.component';
+import { CategoriesComponent } from './view/categories/categories.component';
+import { CookiesComponent } from './footer/footerComponents/cookies/cookies.component';
+import { FooterComponent } from './footer/footer.component';
+import { CompanyInfoComponent } from './footer/footerComponents/company-info/company-info.component';
+import { NewsComponent } from './footer/footerComponents/news/news.component';
+import { CareersComponent } from './footer/footerComponents/careers/careers.component';
+import { PolicyComponent } from './footer/footerComponents/policy/policy.component';
+import { UserAgreementComponent } from './footer/footerComponents/user-agreement/user-agreement.component';
+import { CookieNoticeComponent } from './view/cookie-notice/cookie-notice.component';
+import { HelpComponent } from './footer/footerComponents/help/help.component';
+import { ReturnPolicyComponent } from './footer/footerComponents/return-policy/return-policy.component';
+import { DeliveryMethodsComponent } from './footer/footerComponents/delivery-methods/delivery-methods.component';
+import { ContactUsComponent } from './footer/footerComponents/contact-us/contact-us.component';
 import { AppBootstrapModule } from './AppBootstrapModule';
-import { HeaderComponent } from './main/header/header.component';
+import { HeaderComponent } from './header/header.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { HeaderComponent } from './main/header/header.component';
     BrowserModule,
     HttpClientModule,
     AppBootstrapModule,
-    FormsModule
+    FormsModule,
+    NgbModule.forRoot()
   ],
   declarations: [
     AppComponent,

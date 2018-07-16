@@ -1,0 +1,25 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+$font-stack: Noto Sans;
+
+$background-color: #F7F7F7;
+$primary-color: #006663;
+$secondary-color: #004b49;
+$list-font: .8rem;
+$header-6-font: 1rem;
+
+
+.separator {
+  background: #ddd;
+  border: 0;
+  box-sizing: border-box;
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin-top: 60px;
+}
+
+body {
+  background-color: $background-color;
+  font-family: $font-stack;
+}

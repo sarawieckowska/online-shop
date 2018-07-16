@@ -1,0 +1,36 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '../main';
+
+.row {
+  margin-top: 40px;
+}
+
+.col, .col-4 {
+  padding: 0;
+}
+
+.col-4 {
+  margin-left: 40px;
+  margin-right: -10px;
+}
+
+.colorButton {
+  color: #F7F7F7;
+  font-size: 1rem;
+  background-color: #006663;
+  border-color: #006663;
+  margin-left: -75px;
+}
+
+.colorButton:hover {
+  color: #F7F7F7;
+  background-color: #004b49;
+  border-color: #004b49;
+}
+
+.margin-logo {
+  margin: -20px 40px 0 50px;
+}
+.inlineBlock {
+  display: inline-block;
+}
