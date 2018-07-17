@@ -1,36 +1,20 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import '../main';
+@import '../_button';
 
 .row {
   margin-top: 40px;
 }
 
-.col, .col-4 {
+.col {
   padding: 0;
-}
-
-.col-4 {
-  margin-left: 40px;
-  margin-right: -10px;
-}
-
-.main-button {
-  color: #F7F7F7;
-  font-size: 1rem;
-  background-color: #006663;
-  border-color: #006663;
-  margin-left: -75px;
-}
-
-.main-button:hover {
-  color: #F7F7F7;
-  background-color: #004b49;
-  border-color: #004b49;
+  .col-4 {
+    padding: 0;
+    margin-left: 40px;
+    margin-right: -10px;
+  }
 }
 
 .margin-logo {
   margin: -20px 40px 0 50px;
-}
-.inlineBlock {
-  display: inline-block;
 }

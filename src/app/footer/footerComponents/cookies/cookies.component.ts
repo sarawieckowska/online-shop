@@ -5,7 +5,7 @@ import { User } from '../../../models/User';
 @Component({
   selector: 'app-cookies',
   templateUrl: './cookies.component.html',
-  styleUrls: ['./cookies.component.css'],
+  styleUrls: ['./cookies.component.scss'],
   providers: [AuthService]
 })
 export class CookiesComponent implements OnInit {

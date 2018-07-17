@@ -1,0 +1,41 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '../../../main.scss';
+@import '../../../_button.scss';
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: $secondary-color;
+  margin: $h1-margin;
+}
+
+h6 {
+  font-size: 1.1rem;
+  margin: $h1-margin;
+  color: $secondary-color;
+}
+
+p {
+  font-size: $list-font;
+  color: $p-color;
+}
+
+a {
+  color: $primary-color;
+}
+
+a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: $secondary-color;
+}
+
+.office-hours {
+  font-size: $list-font;
+  margin-bottom: 20px;
+  color: $p-color;
+}
+
+.ml-helpline {
+  margin-left: 150px;
+}

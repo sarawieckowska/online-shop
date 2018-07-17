@@ -3,7 +3,6 @@
     <ul class="nav navbar-nav" *ngIf="categories && categories.length">
       <li class="dropdown" dropdown><a dropdownToggle role="button" class="category-button">Categories<span class="caret"></span></a>
         <ul *dropdownMenu class="dropdown-menu">
-
           <li class="dropdownElem" *ngFor="let item of categories">{{item.name}}</li>
           <li class="dropdownElem"><a href="#">Blouses & Tunics</a></li>
           <li class="dropdownElem"><a href="#">Coats</a></li>

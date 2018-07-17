@@ -6,16 +6,15 @@
 }
 
 h1, h3 {
-  color: #004b49;
+  color: $secondary-color;
   margin: auto;
   padding-bottom: 20px;
-  text-align: center;
 }
 
 p {
-  font-size: .9rem;
+  font-size: $p-font;
 }
 
 ul li, ol li {
-  font-size: .8rem;
+  font-size: $list-font;
 }

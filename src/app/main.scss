@@ -5,9 +5,13 @@ $font-stack: Noto Sans;
 $background-color: #F7F7F7;
 $primary-color: #006663;
 $secondary-color: #004b49;
+$p-color: #001a19;
+
 $list-font: .8rem;
 $p-font: .9rem;
 $header-6-font: 1rem;
+
+$h1-margin: 50px 0 30px 0;
 
 .separator {
   background: #ddd;
@@ -24,8 +28,31 @@ body {
   font-family: $font-stack;
 }
 
-h1, h5 {
-  color: $secondary-color;
+textarea {
+  resize: none;
+}
+
+.dropdownElem {
+  color: $primary-color;
+  font-size: $list-font;
+  padding: 5px 0 5px 15px;
+}
+
+.dropdownElem:hover {
+  font-weight: bold;
+}
+
+.center {
   margin: auto;
-  padding: 30px 0 20px 0;
+  text-align: center;
+}
+
+.central {
+  position: relative;
+  width: 25%;
+  margin: auto;
+}
+
+.ta-center {
+  text-align: center;
 }
