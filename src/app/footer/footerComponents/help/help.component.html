@@ -16,868 +16,1269 @@
       <img src="assets/img/account.svg" alt="Account">
   </div>
   <div class="row">
-    <p>
-      <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
-              [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
-        Toggle
-      </button>
-    </p>
-    <div id="collapseExample" [ngbCollapse]="isCollapsed">
-      <div class="card">
-        <div class="card-body">
-          You can collapse this card by clicking Toggle
-        </div>
-      </div>
-    </div>
     <h2>Orders</h2>
-      <ul>
-        <li><span class="bold-font">Where is my order?</span>
-          <p>Your order will arrive within 3-5 days after it's been placed.You can find a personalised delivery estimate
-            in the shipping confirmation email sent to your email address. So if you're wondering where your order is,
-            please allow up to this date for your order to arrive. A tracking link is provided in your shipping
-            confirmation email and becomes active within 24 hours. You can also track your order in the 'My Orders'
-            section of your account, once the order has been shipped.</p>
-        </li>
-        <li><span class="bold-font">Can I modify my order after it has been placed?</span>
-          <p>Unfortunately, we can’t make changes to your order after it's been finalised. Once an order is placed, the
-            delivery option, delivery address, payment method, and product sizes can't be changed. But you can cancel an
-            order for a limited time after it's been placed; before it’s picked in the warehouse. If this option shows as
-            available to you, we recommend simply cancelling the order and placing a new one.
-          </p>
-        </li>
-        <li><span class="bold-font">How do I cancel my order?</span>
-          <p>If you made a mistake or simply changed your mind after placing an order, there's no need to fuss.
-            As long as your parcel has yet to be picked and packed in our warehouse, you'll have the option to cancel.
-            To cancel your order:
-          </p>
-            <ol>
-              <li>Go to My Orders in your account</li>
+  </div>
+  <div class="row">
+    <ul>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Where is my order?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>Your order will arrive within 3-5 days after it's been placed.You can find a personalised delivery estimate
+                in the shipping confirmation email sent to your email address. So if you're wondering where your order is,
+                please allow up to this date for your order to arrive. A tracking link is provided in your shipping
+                confirmation email and becomes active within 24 hours. You can also track your order in the 'My Orders'
+                section of your account, once the order has been shipped.</p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Can I modify my order after it has been placed?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>Unfortunately, we can’t make changes to your order after it's been finalised. Once an order is placed, the
+                delivery option, delivery address, payment method, and product sizes can't be changed. But you can cancel an
+                order for a limited time after it's been placed; before it’s picked in the warehouse. If this option shows as
+                available to you, we recommend simply cancelling the order and placing a new one.</p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">How do I cancel my order?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>If you made a mistake or simply changed your mind after placing an order, there's no need to fuss.
+                As long as your parcel has yet to be picked and packed in our warehouse, you'll have the option to cancel.
+                To cancel your order:
+              </p>
+              <ol class="list-font">
+                <li>Go to My Orders in your account</li>
 
-              <li>Click on view/cancel order*</li>
+                <li>Click on view/cancel order*</li>
 
-              <li>Click on 'Cancel order' or 'Cancel items' and follow the steps on screen</li>
-            </ol>
-          <br>
-          <p class="bold-font">
-            Some important points:
-          </p>
-          <p>
-            If you redeemed a voucher with your order, the order can only be cancelled in full. Your delivery
-            address can't be changed once you have placed an order, but you can cancel the order and place a new one
-            specifying a different address. Individual Shopper Partner items can't be cancelled. You can only cancel the
-            Partner order in full.
-          </p>
-          <p>
-            *If the 'cancel order' option is no longer available, it means your order has been processed in our warehouse
-            and it's unfortunately too late to cancel it.
-          </p>
-        </li>
-        <li><span class="bold-font">What if an item is out of stock?</span>
-          <p>If an item you want is out of stock in your size, you can register to be notified when your size
-            is available again.
-          </p>
-          <p>
-            Beside your desired size in the size selection of the item page, just click on 'Notify me'. A pop up will
-            appear where you can enter and submit an email address where the notification will be sent.
-          </p>
-          <p>
-            If the size is restocked within the next 3 months, we'll send you an automatic email to let you know.
-            This email does not reserve the item, so if you're still interested then its best to act quickly in
-            case it sells out again.
-          </p>
-        </li>
-        <li><span class="bold-font">Different orders delivered in one parcel</span>
-          <p>
-            In some cases we deliver items from several orders in the same parcel – we will let you know in advance in
-            the delivery confirmation email. You can check whether your parcel contains items from more than one order by
-            logging into your account where you can see which items belong to which order.
-          </p>
-          <p>
-            If you need to return items from different orders, you can pack them all in one return parcel.
-          </p>
-          <p>
-            We bundle your orders to deliver your items in the quickest, most eco-friendly way possible.
-          </p>
-        </li>
-        <li><span class="bold-font">How can I place an order?</span>
-          <p>To place an order, just follow these steps:</p>
-          <ol>
-            <li>Place an item in your bag: Pick the size you want and select 'Add to bag'. Go to your bag in the top
-              right corner when you have finished shopping.</li>
-            <li>From inside the bag select 'Go to checkout'.</li>
-            <li>Select your preferred delivery option. If you have chosen home delivery then confirm your address, if not
-              then select your preferred parcel shop for delivery.</li>
-            <li>You will be asked to select a payment method. Simply select the payment method you would like, fill in
-              the details where required, and click next.</li>
-            <li>You are now given the chance to check your order and add voucher codes or Express Delivery. If you are
-              paying by PayPal you will now be redirected to the PayPal website to complete the process.</li>
-            <li>Once your order has been completed you will see the confirmation on the screen. You will also receive a
-              confirmation email with an order number as a reference and a link to a tracking number once the order is
-              shipped, so that you can track the delivery of your parcel.</li>
-          </ol>
-          <br>
-        </li>
-        <li><span class="bold-font">How can I make sure my delivery address is correct?</span>
-          <p>
-            Before completing your order, please make sure that you have entered the correct delivery address.
-            This is displayed on the right side of the screen during the checkout process.
-          </p>
-          <p>
-            If you notice you need to change this, just click on 'edit' before completing your order.
-          </p>
-        </li>
-        <li><span class="bold-font">How do I search for a specific item?</span>
-          <p>
-            If you know what you're looking for, type it into the search bar at the top left of Shopper.com and
-            click 'Search' button.
-          </p>
-          <p>
-            Search by brand, by product name, or alternatively, search by special occasion, such as ‘wedding’ or ‘party’.
-          </p>
-          <p>
-            After this you can also refine your search by category, colour, material, etc. by using the search filters
-            found at the top and at the side of the page.
-          </p>
-        </li>
-      </ul>
+                <li>Click on 'Cancel order' or 'Cancel items' and follow the steps on screen</li>
+              </ol>
+              <p class="bold-font">
+                Some important points:
+              </p>
+              <p>
+                If you redeemed a voucher with your order, the order can only be cancelled in full. Your delivery
+                address can't be changed once you have placed an order, but you can cancel the order and place a new one
+                specifying a different address. Individual Shopper Partner items can't be cancelled. You can only cancel the
+                Partner order in full.
+              </p>
+              <p>
+                *If the 'cancel order' option is no longer available, it means your order has been processed in our warehouse
+                and it's unfortunately too late to cancel it.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">What if an item is out of stock?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>If an item you want is out of stock in your size, you can register to be notified when your size
+                is available again.
+              </p>
+              <p>
+                Beside your desired size in the size selection of the item page, just click on 'Notify me'. A pop up will
+                appear where you can enter and submit an email address where the notification will be sent.
+              </p>
+              <p>
+                If the size is restocked within the next 3 months, we'll send you an automatic email to let you know.
+                This email does not reserve the item, so if you're still interested then its best to act quickly in
+                case it sells out again.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Different orders delivered in one parcel</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                In some cases we deliver items from several orders in the same parcel – we will let you know in advance in
+                the delivery confirmation email. You can check whether your parcel contains items from more than one order by
+                logging into your account where you can see which items belong to which order.
+              </p>
+              <p>
+                If you need to return items from different orders, you can pack them all in one return parcel.
+              </p>
+              <p>
+                We bundle your orders to deliver your items in the quickest, most eco-friendly way possible.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">How can I place an order?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>To place an order, just follow these steps:</p>
+              <ol class="list-font">
+                <li>Place an item in your bag: Pick the size you want and select 'Add to bag'. Go to your bag in the top
+                  right corner when you have finished shopping.</li>
+                <li>From inside the bag select 'Go to checkout'.</li>
+                <li>Select your preferred delivery option. If you have chosen home delivery then confirm your address, if not
+                  then select your preferred parcel shop for delivery.</li>
+                <li>You will be asked to select a payment method. Simply select the payment method you would like, fill in
+                  the details where required, and click next.</li>
+                <li>You are now given the chance to check your order and add voucher codes or Express Delivery. If you are
+                  paying by PayPal you will now be redirected to the PayPal website to complete the process.</li>
+                <li>Once your order has been completed you will see the confirmation on the screen. You will also receive a
+                  confirmation email with an order number as a reference and a link to a tracking number once the order is
+                  shipped, so that you can track the delivery of your parcel.</li>
+              </ol>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">How can I make sure my delivery address is correct?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                Before completing your order, please make sure that you have entered the correct delivery address.
+                This is displayed on the right side of the screen during the checkout process.
+              </p>
+              <p>
+                If you notice you need to change this, just click on 'edit' before completing your order.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">How do I search for a specific item?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                If you know what you're looking for, type it into the search bar at the top left of Shopper.com and
+                click 'Search' button.
+              </p>
+              <p>
+                Search by brand, by product name, or alternatively, search by special occasion, such as ‘wedding’ or ‘party’.
+              </p>
+              <p>
+                After this you can also refine your search by category, colour, material, etc. by using the search filters
+                found at the top and at the side of the page.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+    </ul>
+  </div>
+  <div class="row">
     <h2>Delivery</h2>
-      <ul>
-        <li><span class="bold-font">What delivery options are available?</span>
-          <p>
-            We currently offer the following three delivery options for getting your order to you:
-          </p>
-          <p class="bold-font">
-            Hermes home delivery: Free
-          </p>
-            <ul class="list-font">
-              <li>Standard delivery: 3-5 days (Mon-Sat), excluding public holidays</li>
-              <li>Expected delivery date provided at checkout</li>
-            </ul>
-          <br>
-          <p class="bold-font">
-            Hermes Click & Collect: Free
-          </p>
-            <ul class="list-font">
-              <li>Standard delivery: 3-5 days (Mon-Sat), excluding public holidays</li>
-              <li>Add your 'pick-up point' address at checkout when prompted for your delivery address</li>
-              <li>You'll receive an SMS when your parcel is ready to be collected</li>
-            </ul>
-          <br>
-          <p class="bold-font">
-            DHL Express delivery: £5.95
-          </p>
-            <ul class="list-font">
-              <li>Next day delivery when you order before 2:00 pm, Monday to Friday, excluding public holidays</li>
-              <li>Select 'Express delivery' on the final order confirmation page after you've selected the home
-                delivery option</li>
-            </ul>
-          <br>
-          <p>
-            Once your order is shipped, we'll send a confirmation email with the expected delivery date. This date is
-            also displayed at the checkout.
-          </p>
-          <p>
-            All orders from Shopper.com can be delivered to an address located in the UK only. We do not offer
-            international shipping.
-          </p>
-        </li>
-        <li><span class="bold-font">Where is my order?</span>
-          <p>
-            You can find a personalised delivery estimate in the shipping confirmation email sent to your email address.
-            So if you're wondering where your order is, please allow up to this date for your order to arrive.
-          </p>
-          <p>
-            A tracking link is provided in your shipping confirmation email and becomes active within 24 hours.
-          </p>
-          <p>
-            You can also track your order in the 'My Orders' section of your account, once the order has been shipped.
-          </p>
-        </li>
-        <li><span class="bold-font">Where does shopper.com deliver to?</span>
-          <p>
-            Orders from Shopper.com are delivered to any address in Europe.
-          </p>
-          <p>
-            To place an order on Shopper.com you will need:
-          </p>
-            <ul class="list-font">
-              <li>European billing address</li>
-              <li>European delivery address</li>
-              <li>Credit Card or PayPal account linked to any European bank account</li>
-              <li>Shopper account</li>
-            </ul>
-          <br>
-        </li>
-        <li><span class="bold-font">Click & Collect delivery and returns</span>
-          <p>
-            Parcel shop delivery and returns is FREE and takes 3-5 working days. Refunds will be processed in 14 days.
-          </p>
-          <p>
-            During the checkout process of your order, you can choose to have your order sent to a Hermes pick-up point,
-            then collect the parcel at a time that’s convenient for you.
-          </p>
-          <p class="bold-font">
-            Delivery:
-          </p>
-            <ul class="list-font">
-              <li>Simply select ‘pick-up point’ and provide your address to find your nearest store for delivery</li>
-              <li>You'll receive an SMS to the number provided when your parcel is ready for collection</li>
-              <li>Remember to have a piece of ID with you when you pick up your parcel</li>
-            </ul>
-          <br>
-          <p class="bold-font">
-            Returns:
-          </p>
-          <ul class="list-font">
-            <li>You'll receive a pre-printed returns label with your order</li>
-            <li>Take the parcel to any local Hermes store with the pre-printed label attached</li>
-          </ul>
-          <br>
-        </li>
-        <li><span class="bold-font">How long does standard delivery take?</span>
-          <p>
-            Standard delivery takes between 3-5 days (Monday-Saturday).
-          </p>
-          <p>
-            If you place your order with us before 8 pm, we’ll start processing it on the same day.
-          </p>
-        </li>
-        <li><span class="bold-font">About £5.95 order express delivery</span>
-          <p class="bold-font">
-            Express delivery times
-          </p>
-            <ul class="list-font">
-              <li>Next day delivery is offered for express delivery orders placed before 2 pm (Mon-Fri,
-                excluding public holidays)</li>
-              <li>The delivery date is included at checkout and in the shipping confirmation email</li>
-            </ul>
-          <br>
-          <p class="bold-font">
-            Express delivery destinations
-          </p>
-            <ul class="list-font">
-              <li>Express deliveries cannot be sent to Click & Collect points. Remember to provide a specific
-                delivery address</li>
-              <li>Some postcodes are not eligible for express delivery. Before ordering, please check it</li>
-            </ul>
-          <br>
-          <p class="bold-font">
-            Tracking your order
-          </p>
-            <ul class="list-font">
-              <li>Log into your customer account to check the status of your order under 'My Orders', or check the
-                tracking link sent in your confirmation email</li>
-            </ul>
-          <br>
-          <p class="bold-font">
-            If you are not home
-          </p>
-            <ul class="list-font">
-              <li>If the DHL express courier doesn’t reach you on their first attempt, they'll leave a note in your
-                letterbox. Follow the instructions on the card to rearrange delivery</li>
-            </ul>
-          <br>
-          <p class="bold-font">
-            Returning express shipped items
-          </p>
-            <ul class="list-font">
-              <li>Express shipping costs will not be refunded in the event of a return</li>
-              <li>We will only refund the express fee in the event that we are unable to meet our delivery promise</li>
-              <li>All returns are FREE via Hermes UK</li>
-            </ul>
-          <br>
-        </li>
-        <li><span class="bold-font">Do delivery and returns cost anything?</span>
-          <p>
-            Our standard delivery is FREE. There is no extra charge.
-          </p>
-          <p>
-            Our express delivery is offered for an extra £5.95 and cannot be refunded should you return the item.
-            We will only refund the express fee if we are unable to meet our delivery promise.
-          </p>
-          <p>
-            All return shipping is FREE of charge.
-          </p>
-        </li>
-        <li><span class="bold-font">My parcel arrived damaged</span>
-          <p>
-            We’re sorry to hear, and hope that the items you ordered arrived intact and complete.
-          </p>
-          <p>
-            If the damage only affects your parcel and you would like to return something from that order, you can use
-            any packing material for the return. Please make sure to use the return documents we provided in the parcel -
-            with our return label, the return is always free of charge for you.
-          </p>
-          <p>
-            Please note that we cannot provide substitutes for damaged parcels.
-          </p>
-        </li>
-      </ul>
+  </div>
+  <div class="row">
+    <ul>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">What delivery options are available?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                We currently offer the following three delivery options for getting your order to you:
+              </p>
+              <p class="bold-font">
+                Hermes home delivery: Free
+              </p>
+              <ul class="list-font">
+                <li>Standard delivery: 3-5 days (Mon-Sat), excluding public holidays</li>
+                <li>Expected delivery date provided at checkout</li>
+              </ul>
+              <p class="bold-font">
+                Hermes Click & Collect: Free
+              </p>
+              <ul class="list-font">
+                <li>Standard delivery: 3-5 days (Mon-Sat), excluding public holidays</li>
+                <li>Add your 'pick-up point' address at checkout when prompted for your delivery address</li>
+                <li>You'll receive an SMS when your parcel is ready to be collected</li>
+              </ul>
+              <p class="bold-font">
+                DHL Express delivery: £5.95
+              </p>
+              <ul class="list-font">
+                <li>Next day delivery when you order before 2:00 pm, Monday to Friday, excluding public holidays</li>
+                <li>Select 'Express delivery' on the final order confirmation page after you've selected the home
+                  delivery option</li>
+              </ul>
+              <p class="mt-paragraph">
+                Once your order is shipped, we'll send a confirmation email with the expected delivery date. This date is
+                also displayed at the checkout.
+              </p>
+              <p>
+                All orders from Shopper.com can be delivered to an address located in the UK only. We do not offer
+                international shipping.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Where is my order?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                You can find a personalised delivery estimate in the shipping confirmation email sent to your email address.
+                So if you're wondering where your order is, please allow up to this date for your order to arrive.
+              </p>
+              <p>
+                A tracking link is provided in your shipping confirmation email and becomes active within 24 hours.
+              </p>
+              <p>
+                You can also track your order in the 'My Orders' section of your account, once the order has been shipped.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Where does shopper.com deliver to?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                Orders from Shopper.com are delivered to any address in Europe.
+              </p>
+              <p>
+                To place an order on Shopper.com you will need:
+              </p>
+              <ul class="list-font">
+                <li>European billing address</li>
+                <li>European delivery address</li>
+                <li>Credit Card or PayPal account linked to any European bank account</li>
+                <li>Shopper account</li>
+              </ul>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Click & Collect delivery and returns</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                Parcel shop delivery and returns is FREE and takes 3-5 working days. Refunds will be processed in 14 days.
+              </p>
+              <p>
+                During the checkout process of your order, you can choose to have your order sent to a Hermes pick-up point,
+                then collect the parcel at a time that’s convenient for you.
+              </p>
+              <p class="bold-font">
+                Delivery:
+              </p>
+              <ul class="list-font">
+                <li>Simply select ‘pick-up point’ and provide your address to find your nearest store for delivery</li>
+                <li>You'll receive an SMS to the number provided when your parcel is ready for collection</li>
+                <li>Remember to have a piece of ID with you when you pick up your parcel</li>
+              </ul>
+              <p class="bold-font">
+                Returns:
+              </p>
+              <ul class="list-font">
+                <li>You'll receive a pre-printed returns label with your order</li>
+                <li>Take the parcel to any local Hermes store with the pre-printed label attached</li>
+              </ul>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">How long does standard delivery take?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                Standard delivery takes between 3-5 days (Monday-Saturday).
+              </p>
+              <p>
+                If you place your order with us before 8 pm, we’ll start processing it on the same day.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">About £5.95 order express delivery</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p class="bold-font">
+                Express delivery times
+              </p>
+              <ul class="list-font">
+                <li>Next day delivery is offered for express delivery orders placed before 2 pm (Mon-Fri,
+                  excluding public holidays)</li>
+                <li>The delivery date is included at checkout and in the shipping confirmation email</li>
+              </ul>
+              <p class="bold-font">
+                Express delivery destinations
+              </p>
+              <ul class="list-font">
+                <li>Express deliveries cannot be sent to Click & Collect points. Remember to provide a specific
+                  delivery address</li>
+                <li>Some postcodes are not eligible for express delivery. Before ordering, please check it</li>
+              </ul>
+              <p class="bold-font">
+                Tracking your order
+              </p>
+              <ul class="list-font">
+                <li>Log into your customer account to check the status of your order under 'My Orders', or check the
+                  tracking link sent in your confirmation email</li>
+              </ul>
+              <p class="bold-font">
+                If you are not home
+              </p>
+              <ul class="list-font">
+                <li>If the DHL express courier doesn’t reach you on their first attempt, they'll leave a note in your
+                  letterbox. Follow the instructions on the card to rearrange delivery</li>
+              </ul>
+              <p class="bold-font">
+                Returning express shipped items
+              </p>
+              <ul class="list-font">
+                <li>Express shipping costs will not be refunded in the event of a return</li>
+                <li>We will only refund the express fee in the event that we are unable to meet our delivery promise</li>
+                <li>All returns are FREE via Hermes UK</li>
+              </ul>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Do delivery and returns cost anything?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+              Our standard delivery is FREE. There is no extra charge.
+              </p>
+              <p>
+                Our express delivery is offered for an extra £5.95 and cannot be refunded should you return the item.
+                We will only refund the express fee if we are unable to meet our delivery promise.
+              </p>
+              <p>
+                All return shipping is FREE of charge.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">My parcel arrived damaged</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                We’re sorry to hear, and hope that the items you ordered arrived intact and complete.
+              </p>
+              <p>
+                If the damage only affects your parcel and you would like to return something from that order, you can use
+                any packing material for the return. Please make sure to use the return documents we provided in the parcel -
+                with our return label, the return is always free of charge for you.
+              </p>
+              <p>
+                Please note that we cannot provide substitutes for damaged parcels.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+    </ul>
+  </div>
+  <div class="row">
     <h2>Returns and Refunds</h2>
-      <ul>
-        <li><span class="bold-font">How do I return my order?</span>
-          <p>
-            If it’s not a fit, you have 100 days to return your unworn items - FREE. You can either:
-          </p>
-            <ul class="list-font">
-              <li>Drop off a parcel at your nearest Hermes ParcelShop or Doddle store</li>
-              <li>Schedule a pick up for your parcel</li>
-            </ul>
-          <br>
-          <p>
-            Just mark the items you are returning on the return form that came with your order, pack your items in the
-            box, and use the enclosed return label to send back your items. Make sure to cover up or remove the original
-            delivery barcode on the box.
-          </p>
-        </li>
-        <li><span class="bold-font">About our return policy</span>
-          <p>
-            If you're not happy with your purchase or think your goods arrived damaged, you can send any unworn* item
-            back to us FREE of charge within 100 days of the delivery date.
-          </p>
-          <p>
-            *Items worn purely to see if they fit are not considered worn. In the unlikely event that an item is
-            returned to us in an unsuitable condition, we may have to send it back to you. This does not affect
-            your statutory rights.
-          </p>
-        </li>
-        <li><span class="bold-font">My return label is missing. How do I replace it?</span>
-          <p>
-            If you're missing a return label, a printable PDF copy of your return label will be created for you at the
-            end of the online return process, in My Returns section.
-          </p>
-          <p>
-            If you can't print the label at the moment, you'll find it in the 'My Returns' section for later on.
-          </p>
-          <p>
-            If you don’t have access to a printer, you can request to have a return label sent to you by post at this
-            stage by selecting this option instead of print. Remember this can take up to 7 days.
-          </p>
-        </li>
-        <li><span class="bold-font">Click & Collect delivery and returns</span>
-          <p>
-            Parcel shop delivery and returns is FREE and takes 3-5 working days. Refunds will be processed in 14 days.
-          </p>
-          <p>
-            During the checkout process of your order, you can choose to have your order sent to a Hermes pick-up point,
-            then collect the parcel at a time that’s convenient for you.
-          </p>
-          <p class="bold-font">
-            Delivery:
-          </p>
-            <ul class="list-font">
-              <li>Simply select ‘pick-up point’ and provide your address to find your nearest store for delivery</li>
-              <li>You'll receive an SMS to the number provided when your parcel is ready for collection</li>
-              <li>Remember to have a piece of ID with you when you pick up your parcel</li>
-            </ul>
-          <br>
-          <p class="bold-font">
-            Returns:
-          </p>
-            <ul class="list-font">
-              <li>You'll receive a pre-printed returns label with your order</li>
-              <li>Take the parcel to any local Hermes store with the pre-printed label attached</li>
-            </ul>
-          <br>
-        </li>
-        <li><span class="bold-font">When will I receive my refund?</span>
-          <p>
-            It can take up to 14 days for your return to be fully processed.
-          </p>
-          <p>
-            Your original payment method will be refunded. It may take 2-3 days to clear depending on your bank.
-          </p>
-          <p>
-            The refund could appear on your account around the time of purchase or the time of refund.
-          </p>
-          <p>
-            Please note:
-          </p>
-          <p>
-            If you selected express delivery the express shipping costs of £5.95 will not be refunded.
-          </p>
-        </li>
-        <li><span class="bold-font">My return has not been collected. What do I do?</span>
-          <p>
-            We're sorry to hear that your return has not been picked up!
-          </p>
-          <p>
-            To arrange for a new collection, please get in touch with us. Collections can be arranged Monday to Saturday.
-            The time frame for pick-up is between 8 am - 8 pm.
-          </p>
-          <p>
-            Alternatively, you can drop off your return anytime at a local Hermes ParcelShop. Find your closest shop
-            using your post code here.
-          </p>
-          <p>
-            The same return label can be used for any return method you chose.
-          </p>
-          <p>
-            Your refund will be with you within 14 days of the return.
-          </p>
-        </li>
-        <li><span class="bold-font">Can I return multiple orders at the same time?</span>
-          <p>
-            If you have items from several orders to return to us, simply fill out the return slip for each order,
-            pack each item you are returning along with their return slip in one box, and use a return label from any of
-            the orders (you only need one).
-          </p>
-          <p>
-            Keep in mind, this return process might take a little longer as all items have to be booked and delivered
-            back to the correct warehouse(s).
-          </p>
-        </li>
-        <li><span class="bold-font">What if my item is damaged or defective?</span>
-          <p>
-            If an item is damaged or defective, you can file a complaint with us. To process this, we would need:
-          </p>
-            <ul class="list-font">
-              <li>A brief description about how the damage/defect has arisen.</li>
-              <li>4-5 informative pictures, with a description, for documentation purposes.</li>
-            </ul>
-          <br>
-          <p>
-            The defect must be clearly visible on at least one of the images. In addition, we would need complete photos
-            of the product e.g. one from the front and one from the back. If the item is a shoe, we also
-            require a picture of the sole.
-          </p>
-          <p>
-            You can send the pictures via email to reclamation@Shopper.com. We kindly recommend you to use either ZIP,
-            RAR or JPEG format when sending your pictures. Once we receive the photos, we will review your request as
-            quickly as possible. You will receive feedback from us within a few days on how to proceed.
-          </p>
-          <p>
-            We are unable to accept a reclamation for the following defects:
-          </p>
-            <ul class="list-font">
-              <li>Scuffed noses of shoes due to every day usage</li>
-              <li>Damage to the heel of a shoe</li>
-              <li>Damage due to incorrect or intense usage</li>
-              <li>Increased perspiration</li>
-              <li>Colour transfer (i.e. jeans colouring socks blue)</li>
-              <li>Bobbling of the fabric</li>
-              <li>Damage due to external factors, such as friction, sharp objects or chemicals</li>
-              <li>Articles that cause physical discomfort i.e. blisters</li>
-            </ul>
-          <br>
-        </li>
-        <li><span class="bold-font">Authenticity of products</span>
-          <p>
-            All products sold on our website are genuine. We only trade with reputable manufacturers who provide the
-            highest quality of products.
-          </p>
-          <p>
-            We do not sell fake, counterfeit, or replica goods.
-          </p>
-        </li>
-        <li><span class="bold-font">Do you have an exchange policy?</span>
-          <p>
-            Unfortunately, we don't offer exchanges – only refunds.
-          </p>
-          <p>
-            With our FREE return policy, you have 100 days from the date of delivery to return the item(s). If you'd like
-            an item in a different size, style, or colour for example, simply return your original order for a full
-            refund and place a new order with the different items.
-          </p>
-        </li>
-        <li><span class="bold-font">Do delivery and returns cost anything?</span>
-          <p>
-            Our standard delivery is FREE. There is no extra charge.
-          </p>
-          <p>
-            Our express delivery is offered for an extra £5.95 and cannot be refunded should you return the item.
-            We will only refund the express fee if we are unable to meet our delivery promise.
-          </p>
-          <p>
-            All return shipping is FREE of charge.
-          </p>
-        </li>
-      </ul>
+  </div>
+  <div class="row">
+    <ul>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">How do I return my order?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                If it’s not a fit, you have 100 days to return your unworn items - FREE. You can either:
+              </p>
+              <ul class="list-font">
+                <li>Drop off a parcel at your nearest Hermes ParcelShop or Doddle store</li>
+                <li>Schedule a pick up for your parcel</li>
+              </ul>
+              <p class="mt-paragraph">
+                Just mark the items you are returning on the return form that came with your order, pack your items in the
+                box, and use the enclosed return label to send back your items. Make sure to cover up or remove the original
+                delivery barcode on the box.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">About our return policy</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                If you're not happy with your purchase or think your goods arrived damaged, you can send any unworn* item
+                back to us FREE of charge within 100 days of the delivery date.
+              </p>
+              <p>
+                *Items worn purely to see if they fit are not considered worn. In the unlikely event that an item is
+                returned to us in an unsuitable condition, we may have to send it back to you. This does not affect
+                your statutory rights.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">My return label is missing. How do I replace it?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                If you're missing a return label, a printable PDF copy of your return label will be created for you at the
+                end of the online return process, in My Returns section.
+              </p>
+              <p>
+                If you can't print the label at the moment, you'll find it in the 'My Returns' section for later on.
+              </p>
+              <p>
+                If you don’t have access to a printer, you can request to have a return label sent to you by post at this
+                stage by selecting this option instead of print. Remember this can take up to 7 days.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Click & Collect delivery and returns</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                Parcel shop delivery and returns is FREE and takes 3-5 working days. Refunds will be processed in 14 days.
+              </p>
+              <p>
+                During the checkout process of your order, you can choose to have your order sent to a Hermes pick-up point,
+                then collect the parcel at a time that’s convenient for you.
+              </p>
+              <p class="bold-font">
+                Delivery:
+              </p>
+              <ul class="list-font">
+                <li>Simply select ‘pick-up point’ and provide your address to find your nearest store for delivery</li>
+                <li>You'll receive an SMS to the number provided when your parcel is ready for collection</li>
+                <li>Remember to have a piece of ID with you when you pick up your parcel</li>
+              </ul>
+              <p class="bold-font">
+                Returns:
+              </p>
+              <ul class="list-font">
+                <li>You'll receive a pre-printed returns label with your order</li>
+                <li>Take the parcel to any local Hermes store with the pre-printed label attached</li>
+              </ul>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">When will I receive my refund?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                It can take up to 14 days for your return to be fully processed.
+              </p>
+              <p>
+                Your original payment method will be refunded. It may take 2-3 days to clear depending on your bank.
+              </p>
+              <p>
+                The refund could appear on your account around the time of purchase or the time of refund.
+              </p>
+              <p>
+                Please note:
+              </p>
+              <p>
+                If you selected express delivery the express shipping costs of £5.95 will not be refunded.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">My return has not been collected. What do I do?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                We're sorry to hear that your return has not been picked up!
+              </p>
+              <p>
+                To arrange for a new collection, please get in touch with us. Collections can be arranged Monday to Saturday.
+                The time frame for pick-up is between 8 am - 8 pm.
+              </p>
+              <p>
+                Alternatively, you can drop off your return anytime at a local Hermes ParcelShop. Find your closest shop
+                using your post code here.
+              </p>
+              <p>
+                The same return label can be used for any return method you chose.
+              </p>
+              <p>
+                Your refund will be with you within 14 days of the return.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Can I return multiple orders at the same time?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                If you have items from several orders to return to us, simply fill out the return slip for each order,
+                pack each item you are returning along with their return slip in one box, and use a return label from any of
+                the orders (you only need one).
+              </p>
+              <p>
+                Keep in mind, this return process might take a little longer as all items have to be booked and delivered
+                back to the correct warehouse(s).
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">What if my item is damaged or defective?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                If an item is damaged or defective, you can file a complaint with us. To process this, we would need:
+              </p>
+              <ul class="list-font">
+                <li>A brief description about how the damage/defect has arisen.</li>
+                <li>4-5 informative pictures, with a description, for documentation purposes.</li>
+              </ul>
+              <p class="mt-paragraph">
+                The defect must be clearly visible on at least one of the images. In addition, we would need complete photos
+                of the product e.g. one from the front and one from the back. If the item is a shoe, we also
+                require a picture of the sole.
+              </p>
+              <p>
+                You can send the pictures via email to reclamation@Shopper.com. We kindly recommend you to use either ZIP,
+                RAR or JPEG format when sending your pictures. Once we receive the photos, we will review your request as
+                quickly as possible. You will receive feedback from us within a few days on how to proceed.
+              </p>
+              <p>
+                We are unable to accept a reclamation for the following defects:
+              </p>
+              <ul class="list-font">
+                <li>Scuffed noses of shoes due to every day usage</li>
+                <li>Damage to the heel of a shoe</li>
+                <li>Damage due to incorrect or intense usage</li>
+                <li>Increased perspiration</li>
+                <li>Colour transfer (i.e. jeans colouring socks blue)</li>
+                <li>Bobbling of the fabric</li>
+                <li>Damage due to external factors, such as friction, sharp objects or chemicals</li>
+                <li>Articles that cause physical discomfort i.e. blisters</li>
+              </ul>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Authenticity of products</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                All products sold on our website are genuine. We only trade with reputable manufacturers who provide the
+                highest quality of products.
+              </p>
+              <p>
+                We do not sell fake, counterfeit, or replica goods.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Do you have an exchange policy?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                Unfortunately, we don't offer exchanges – only refunds.
+              </p>
+              <p>
+                With our FREE return policy, you have 100 days from the date of delivery to return the item(s). If you'd like
+                an item in a different size, style, or colour for example, simply return your original order for a full
+                refund and place a new order with the different items.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Do delivery and returns cost anything?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                Our standard delivery is FREE. There is no extra charge.
+              </p>
+              <p>
+                Our express delivery is offered for an extra £5.95 and cannot be refunded should you return the item.
+                We will only refund the express fee if we are unable to meet our delivery promise.
+              </p>
+              <p>
+                All return shipping is FREE of charge.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+    </ul>
+  </div>
+  <div class="row">
     <h2>Payments</h2>
-      <ul>
-        <li><span class="bold-font">Paying with credit card</span>
-          <p>
-            Which cards do you accept?
-          </p>
-          <p class="bold-font">
-            Credit
-          </p>
-            <ul class="list-font">
-              <li>Mastercard</li>
-              <li>Visa</li>
-              <li>American Express</li>
-            </ul>
-          <br>
-          <p class="bold-font">
-            Debit
-          </p>
-            <ul class="list-font">
-              <li>Maestro</li>
-              <li>Visa Electron</li>
-              <li>Visa Debit</li>
-            </ul>
-          <br>
-          <p class="bold-font">
-            When will my card be charged?
-          </p>
-          <p>
-            Your card will not be charged until your order has left our warehouse. If you send goods back, the amount
-            will be credited back to your card account.
-          </p>
-          <p class="bold-font">
-            Are my card details safe?
-          </p>
-          <p>
-            For your convenience, your payment details will be saved on our encrypted server. Your card information is
-            encrypted in our system using 128-bit SSL technology. This high standard of security means shopping with a
-            card on Shopper is safe and secure, and ensures that your data will under no circumstances be accessible
-            by third parties.
-          </p>
-          <p class="bold-font">
-            3DS Authentication
-          </p>
-          <p>
-            Our checkout process uses 3DS authentication (Verified by Visa, MasterCard SecureCode and American Express
-            SafeKey). These services enhance your existing card account against unauthorised use when you shop with us.
-            If you require more detailed information or encounter a problem with the authentication process, please
-            contact your card issuer directly. Unfortunately we have no control over the payment authentication process
-            so we will be unable to assist with any authentication enquiries.
-          </p>
-        </li>
-        <li><span class="bold-font">Which available payment methods are offered?</span>
-          <p>
-            We offer 4 available payment methods:
-          </p>
-          <ul class="list-font">
-            <li>PayPal</li>
-            <li>Credit card</li>
-            <li>Apple Pay (Shopper App only)</li>
-            <li>Prepayment</li>
-          </ul>
-          <br>
-        </li>
-        <li><span class="bold-font">Paying with PayPal</span>
-          <p class="bold-font">
-            When will I be charged?
-          </p>
-          <p>
-            PayPal payments are usually credited within a few minutes.
-          </p>
-          <p class="bold-font">
-            What sort of payment confirmation will I receive?
-          </p>
-          <p>
-            You will receive an order confirmation which contains the link to your PayPal payment.
-          </p>
-          <p>
-            If for some reason, the payment process is interrupted, this link offers you the chance to reprocess your
-            payment with PayPal. Please note, however, that after three hours payment via PayPal is no longer possible.
-          </p>
-          <p class="bold-font">
-            Can I pay by PayPal without creating a PayPal account?
-          </p>
-          <p>
-            Yes, in order to do so select PayPal as your preferred payment method during checkout. At the end of the
-            ordering process, you will be directed to PayPal. If you prefer not to create an account, then simply
-            select the option ‘Don’t have a PayPal account?’ and you can enter your card details and confirm
-            the payment as a PayPal guest.
-          </p>
-          <p class="bold-font">
-            What happens if I make a return?
-          </p>
-          <p>
-            The amount will be credited to your PayPal account, unless you have paid as a guest. In that case, the
-            amount will be credited to your bank account.
-          </p>
-        </li>
-        <li><span class="bold-font">Paying with Prepayment</span>
-          <p>
-            Prepayment is not always shown as an available payment option and will only be offered as an alternative if
-            no other payment method is available.
-          </p>
-          <p>
-            If prepayment is the only offered payment method then we can not influence this. It doesn't mean that you
-            won't get other payment options in the future.
-          </p>
-          <p class="bold-font">
-            How do I pay by prepayment?
-          </p>
-          <p>
-            After placing the order, you'll receive a confirmation email with the necessary details for the bank transfer.
-          </p>
-          <p>
-            As soon as your payment reaches us, we will start processing your order. Depending on your bank, it may
-            take 2-4 working days until your payment reaches us. The products you have ordered will be reserved for
-            you for a maximum of 7 days.
-          </p>
-          <p>
-            Please be advised that, in order for us to process the order correctly, it is important that you enter the
-            order number in the reference field and that you pay for each order separately.
-          </p>
-          <p>
-            Back to all payment methods.
-          </p>
-        </li>
-        <li><span class="bold-font">Paying with Apple Pay</span>
-          <p class="bold-font">
-            How can I use Apple Pay?
-          </p>
-          <p>
-            Apple Pay makes paying even easier, more secure, and more private than ever before. To start with,
-            make sure you have the latest version of the Shopper app and have registered your card details in the
-            Apple Wallet. You can then make a purchase with a single touch by placing your finger on Touch ID
-            when checking out.
-          </p>
-          <p>
-            Apple Pay works with iPhone 6 and later, iPhone SE, iPad Pro, iPad Air 2, and iPad mini 3 and later.
-            You can also use Apple Pay in Safari on any Mac introduced in or after 2012 running macOS Sierra, and
-            confirm the payment with iPhone 6 or later, Apple Watch, or with a MacBook Pro featuring Touch ID.
-          </p>
-          <p>
-            It is currently not possible to choose express delivery when paying with Apple Pay. In the event that you
-            would like to send your items to a collection point, please input the address in the payment sheet
-            directly and it will be automatically saved for next time.
-          </p>
-          <p class="bold-font">
-            Is Apple Pay Secure?
-          </p>
-          <p>
-            Security and privacy are at the core of Apple Pay. When you add a credit or debit card to Apple Pay,
-            the actual card number is neither stored on the device, nor on Apple servers. Instead, a unique number is
-            assigned, encrypted, and securely stored in the Secure Element on your device. Each transaction is authorised
-            with a one-time unique dynamic security code, instead of using the security code from the back of your card.
-          </p>
-        </li>
-        <li><span class="bold-font">How can I get a VAT invoice and refund?</span>
-          <p>
-            Please take your invoice to customs for a stamp within three months of receiving the goods. You will need
-            to show the goods purchased at the time of receiving the stamp.
-          </p>
-          <p>
-            Get in touch with our friendly Customer Care team to advise them that you have the stamped invoice.
-            If they need a copy they will let you know how to send it over. Once the VAT refund has been issued we
-            will notify you by email.
-          </p>
-          <p>
-            If you require a duplicate receipt or invoice, please let us know so we can issue you one as soon as possible.
-          </p>
-        </li>
-        <li><span class="bold-font">How secure is shopping at Shopper?</span>
-          <p>
-            Internet shopping is convenient because it’s not restricted by store opening hours, meaning that you can shop
-            any time from the comfort of your own home or office. However, not all online retailers are serious
-            about security as Shopper.
-          </p>
-          <p class="bold-font">
-            Trusted Shops review site
-          </p>
-          <p>
-            Shopper has the Trusted Shops seal of approval, providing our customers with protection throughout the whole
-            shopping and payment process. It also means that any personal information you provide us with is kept safe.
-          </p>
-          <p class="bold-font">
-            SSL
-          </p>
-          <p>
-            We use 128-bit SSL security encryption in our checkout process. This encrypts the personal information you
-            provide us, ensuring that it is safe and not accessible by any third parties. However, the most important
-            protection is your own password, so please make sure you never give it out to others. Shopper also has a
-            privacy policy and complies with statutory requirements. Your data is used solely for the processing of
-            your order and to continue to improve our services.
-          </p>
-          <p>
-            Under no circumstances will your personal information be disclosed to third parties without your consent.
-            For more details, please refer to the Terms & Conditions.
-          </p>
-          <p class="bold-font">
-            Phishing
-          </p>
-          <p>
-            With the Trusted Shops seal of approval as well as SSL security encryption, we can guarantee that no form of
-            phishing or phishing scams are possible on our site.
-          </p>
-        </li>
-      </ul>
+  </div>
+  <div class="row">
+    <ul>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Paying with credit card</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                Which cards do you accept?
+              </p>
+              <p class="bold-font">
+                Credit
+              </p>
+              <ul class="list-font">
+                <li>Mastercard</li>
+                <li>Visa</li>
+                <li>American Express</li>
+              </ul>
+              <p class="bold-font">
+                Debit
+              </p>
+              <ul class="list-font">
+                <li>Maestro</li>
+                <li>Visa Electron</li>
+                <li>Visa Debit</li>
+              </ul>
+              <p class="bold-font">
+                When will my card be charged?
+              </p>
+              <p>
+                Your card will not be charged until your order has left our warehouse. If you send goods back, the amount
+                will be credited back to your card account.
+              </p>
+              <p class="bold-font">
+                Are my card details safe?
+              </p>
+              <p>
+                For your convenience, your payment details will be saved on our encrypted server. Your card information is
+                encrypted in our system using 128-bit SSL technology. This high standard of security means shopping with a
+                card on Shopper is safe and secure, and ensures that your data will under no circumstances be accessible
+                by third parties.
+              </p>
+              <p class="bold-font">
+                3DS Authentication
+              </p>
+              <p>
+                Our checkout process uses 3DS authentication (Verified by Visa, MasterCard SecureCode and American Express
+                SafeKey). These services enhance your existing card account against unauthorised use when you shop with us.
+                If you require more detailed information or encounter a problem with the authentication process, please
+                contact your card issuer directly. Unfortunately we have no control over the payment authentication process
+                so we will be unable to assist with any authentication enquiries.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Which available payment methods are offered?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                We offer 4 available payment methods:
+              </p>
+              <ul class="list-font">
+                <li>PayPal</li>
+                <li>Credit card</li>
+                <li>Apple Pay (Shopper App only)</li>
+                <li>Prepayment</li>
+              </ul>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Paying with PayPal</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p class="bold-font">
+                When will I be charged?
+              </p>
+              <p>
+                PayPal payments are usually credited within a few minutes.
+              </p>
+              <p class="bold-font">
+                What sort of payment confirmation will I receive?
+              </p>
+              <p>
+                You will receive an order confirmation which contains the link to your PayPal payment.
+              </p>
+              <p>
+                If for some reason, the payment process is interrupted, this link offers you the chance to reprocess your
+                payment with PayPal. Please note, however, that after three hours payment via PayPal is no longer possible.
+              </p>
+              <p class="bold-font">
+                Can I pay by PayPal without creating a PayPal account?
+              </p>
+              <p>
+                Yes, in order to do so select PayPal as your preferred payment method during checkout. At the end of the
+                ordering process, you will be directed to PayPal. If you prefer not to create an account, then simply
+                select the option ‘Don’t have a PayPal account?’ and you can enter your card details and confirm
+                the payment as a PayPal guest.
+              </p>
+              <p class="bold-font">
+                What happens if I make a return?
+              </p>
+              <p>
+                The amount will be credited to your PayPal account, unless you have paid as a guest. In that case, the
+                amount will be credited to your bank account.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Paying with Prepayment</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                Prepayment is not always shown as an available payment option and will only be offered as an alternative if
+                no other payment method is available.
+              </p>
+              <p>
+                If prepayment is the only offered payment method then we can not influence this. It doesn't mean that you
+                won't get other payment options in the future.
+              </p>
+              <p class="bold-font">
+                How do I pay by prepayment?
+              </p>
+              <p>
+                After placing the order, you'll receive a confirmation email with the necessary details for the bank transfer.
+              </p>
+              <p>
+                As soon as your payment reaches us, we will start processing your order. Depending on your bank, it may
+                take 2-4 working days until your payment reaches us. The products you have ordered will be reserved for
+                you for a maximum of 7 days.
+              </p>
+              <p>
+                Please be advised that, in order for us to process the order correctly, it is important that you enter the
+                order number in the reference field and that you pay for each order separately.
+              </p>
+              <p>
+                Back to all payment methods.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Paying with Apple Pay</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p class="bold-font">
+                How can I use Apple Pay?
+              </p>
+              <p>
+                Apple Pay makes paying even easier, more secure, and more private than ever before. To start with,
+                make sure you have the latest version of the Shopper app and have registered your card details in the
+                Apple Wallet. You can then make a purchase with a single touch by placing your finger on Touch ID
+                when checking out.
+              </p>
+              <p>
+                Apple Pay works with iPhone 6 and later, iPhone SE, iPad Pro, iPad Air 2, and iPad mini 3 and later.
+                You can also use Apple Pay in Safari on any Mac introduced in or after 2012 running macOS Sierra, and
+                confirm the payment with iPhone 6 or later, Apple Watch, or with a MacBook Pro featuring Touch ID.
+              </p>
+              <p>
+                It is currently not possible to choose express delivery when paying with Apple Pay. In the event that you
+                would like to send your items to a collection point, please input the address in the payment sheet
+                directly and it will be automatically saved for next time.
+              </p>
+              <p class="bold-font">
+                Is Apple Pay Secure?
+              </p>
+              <p>
+                Security and privacy are at the core of Apple Pay. When you add a credit or debit card to Apple Pay,
+                the actual card number is neither stored on the device, nor on Apple servers. Instead, a unique number is
+                assigned, encrypted, and securely stored in the Secure Element on your device. Each transaction is authorised
+                with a one-time unique dynamic security code, instead of using the security code from the back of your card.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">How can I get a VAT invoice and refund?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                Please take your invoice to customs for a stamp within three months of receiving the goods. You will need
+                to show the goods purchased at the time of receiving the stamp.
+              </p>
+              <p>
+                Get in touch with our friendly Customer Care team to advise them that you have the stamped invoice.
+                If they need a copy they will let you know how to send it over. Once the VAT refund has been issued we
+                will notify you by email.
+              </p>
+              <p>
+                If you require a duplicate receipt or invoice, please let us know so we can issue you one as soon as possible.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">How secure is shopping at Shopper?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                Internet shopping is convenient because it’s not restricted by store opening hours, meaning that you can shop
+                any time from the comfort of your own home or office. However, not all online retailers are serious
+                about security as Shopper.
+              </p>
+              <p class="bold-font">
+                Trusted Shops review site
+              </p>
+              <p>
+                Shopper has the Trusted Shops seal of approval, providing our customers with protection throughout the whole
+                shopping and payment process. It also means that any personal information you provide us with is kept safe.
+              </p>
+              <p class="bold-font">
+                SSL
+              </p>
+              <p>
+                We use 128-bit SSL security encryption in our checkout process. This encrypts the personal information you
+                provide us, ensuring that it is safe and not accessible by any third parties. However, the most important
+                protection is your own password, so please make sure you never give it out to others. Shopper also has a
+                privacy policy and complies with statutory requirements. Your data is used solely for the processing of
+                your order and to continue to improve our services.
+              </p>
+              <p>
+                Under no circumstances will your personal information be disclosed to third parties without your consent.
+                For more details, please refer to the Terms & Conditions.
+              </p>
+              <p class="bold-font">
+                Phishing
+              </p>
+              <p>
+                With the Trusted Shops seal of approval as well as SSL security encryption, we can guarantee that no form of
+                phishing or phishing scams are possible on our site.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+    </ul>
+  </div>
+  <div class="row">
     <h2>Vouchers</h2>
-      <ul>
-        <li><span class="bold-font">Gift cards and voucher codes general info</span>
-          <p class="bold-font">
-            Voucher Codes
-          </p>
-          <p>
-            Please note that each voucher code may only be used once. The following applies to vouchers from campaigns
-            in our newsletters, magazines, etc:
-          </p>
-            <ul class="list-font">
-              <li>Only one voucher code can be redeemed per order. vouchers can, however, be used in combination with
-                credit from a gift card</li>
-              <li>Please check the expiry date of your voucher code</li>
-              <li>Certain voucher codes cannot be used to purchase discounted items</li>
-              <li>Voucher codes may only be valid for particular products and categories</li>
-              <li>Voucher codes may have a minimum order value</li>
-              <li>If you send goods back, we reserve the right to not renew the validity of your voucher code</li>
-            </ul>
-          <br>
-          <p class="bold-font">
-            Gift Cards
-          </p>
-            <ul class="list-font">
-              <li>Gift cards are valid indefinitely</li>
-              <li>It is possible to use more than one gift card per order (these can also be used in combination
-                with a voucher code)</li>
-              <li>After placing an order, any value left on your gift card will be uploaded as credit in your Shopper
-                customer account</li>
-              <li>Your account balance can be found in ‘My Account’ under ‘My vouchers’</li>
-              <li>If you return goods that have been purchased with a gift card the credit will be added to your customer
-                account and you will be able to use it on future orders</li>
-              <li>Gift card credit cannot be exchanged for cash</li>
-              <li>There is no minimum order value for orders placed using a gift card</li>
-            </ul>
-          <br>
-        </li>
-        <li><span class="bold-font">Does Shopper offer student discounts?</span>
-          <p>
-            Yes we do!
-          </p>
-          <p>
-            Just upload a photo of your student ID and you'll automatically get 10% off.
-          </p>
-        </li>
-        <li><span class="bold-font">How do I redeem a voucher code or gift card?</span>
-          <ul class="list-font">
-            <li>Check the voucher code terms and conditions, to make sure your order meets the requirements. Gift cards
-              are valid for all orders</li>
-            <li>Proceed to the checkout to complete your purchase</li>
-            <li>On the order confirmation page, enter your voucher code or gift card number and click 'Redeem'</li>
-          </ul>
-          <br>
-        </li>
-        <li><span class="bold-font">Returns for orders purchased with a gift card</span>
-          <p>
-            If you return goods that have been purchased with a gift card, the credit will be added to your customer
-            account and you will be able to use it for future orders.
-          </p>
-          <p>
-            To view your current gift card balance, go to 'My Account' in the top right corner then 'My overview'.
-            Your current balance is then displayed in the 'My Vouchers' section.
-          </p>
-          <p>
-            If you have used a gift card to purchase part of your order and then you make a return of some items, then
-            the gift card will be applied to the part of the order that you keep.
-          </p>
-          <p>
-            If you used a voucher code then the terms and conditions of the voucher will apply.
-          </p>
-        </li>
-        <li><span class="bold-font">How do I buy a gift card?</span>
-          <p>
-            You can buy a Shopper gift cards for your friends and family from the dedicated gift card page.
-          </p>
-          <p>
-            You will then be asked to select your preferred design and the value of your gift card. You will also have
-            the option to personalise your gift card by writing a message.
-          </p>
-          <p>
-            Your gift card can be sent by post, email, or downloaded as a PDF to print. All you need to do then is click
-            'Buy voucher' and you will redirected to the checkout for payment.
-          </p>
-        </li>
-      </ul>
+  </div>
+  <div class="row">
+    <ul>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Gift cards and voucher codes general info</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p class="bold-font">
+                Voucher Codes
+              </p>
+              <p>
+                Please note that each voucher code may only be used once. The following applies to vouchers from campaigns
+                in our newsletters, magazines, etc:
+              </p>
+              <ul class="list-font">
+                <li>Only one voucher code can be redeemed per order. vouchers can, however, be used in combination with
+                  credit from a gift card</li>
+                <li>Please check the expiry date of your voucher code</li>
+                <li>Certain voucher codes cannot be used to purchase discounted items</li>
+                <li>Voucher codes may only be valid for particular products and categories</li>
+                <li>Voucher codes may have a minimum order value</li>
+                <li>If you send goods back, we reserve the right to not renew the validity of your voucher code</li>
+              </ul>
+              <p class="bold-font">
+                Gift Cards
+              </p>
+              <ul class="list-font">
+                <li>Gift cards are valid indefinitely</li>
+                <li>It is possible to use more than one gift card per order (these can also be used in combination
+                  with a voucher code)</li>
+                <li>After placing an order, any value left on your gift card will be uploaded as credit in your Shopper
+                  customer account</li>
+                <li>Your account balance can be found in ‘My Account’ under ‘My vouchers’</li>
+                <li>If you return goods that have been purchased with a gift card the credit will be added to your customer
+                  account and you will be able to use it on future orders</li>
+                <li>Gift card credit cannot be exchanged for cash</li>
+                <li>There is no minimum order value for orders placed using a gift card</li>
+              </ul>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Does Shopper offer student discounts?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                Yes we do!
+              </p>
+              <p>
+                Just upload a photo of your student ID and you'll automatically get 10% off.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">How do I redeem a voucher code or gift card?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <ul class="list-font">
+                <li>Check the voucher code terms and conditions, to make sure your order meets the requirements. Gift cards
+                  are valid for all orders</li>
+                <li>Proceed to the checkout to complete your purchase</li>
+                <li>On the order confirmation page, enter your voucher code or gift card number and click 'Redeem'</li>
+              </ul>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Returns for orders purchased with a gift card</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                If you return goods that have been purchased with a gift card, the credit will be added to your customer
+                account and you will be able to use it for future orders.
+              </p>
+              <p>
+                To view your current gift card balance, go to 'My Account' in the top right corner then 'My overview'.
+                Your current balance is then displayed in the 'My Vouchers' section.
+              </p>
+              <p>
+                If you have used a gift card to purchase part of your order and then you make a return of some items, then
+                the gift card will be applied to the part of the order that you keep.
+              </p>
+              <p>
+                If you used a voucher code then the terms and conditions of the voucher will apply.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">How do I buy a gift card?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                You can buy a Shopper gift cards for your friends and family from the dedicated gift card page.
+              </p>
+              <p>
+                You will then be asked to select your preferred design and the value of your gift card. You will also have
+                the option to personalise your gift card by writing a message.
+              </p>
+              <p>
+                Your gift card can be sent by post, email, or downloaded as a PDF to print. All you need to do then is click
+                'Buy voucher' and you will redirected to the checkout for payment.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+    </ul>
+  </div>
+  <div class="row">
     <h2>My Account</h2>
-      <ul>
-        <li><span class="bold-font">How do I reset my password?</span>
-          <p>
-            If you need to change or reset your password just follow the on-screen instructions via the button below.
-          </p>
-          <button class="btn btn-outline-success my-2 my-sm-0 main-button" type="submit">RESET PASSWORD</button>
-          <p>
-            If you forgot your password, you'll need to enter your email address and hit send. You will receive an email
-            with a link in it (please note: this email may take some time to reach you and could appear in your
-            spam / junk folder).
-          </p>
-          <p>
-            Click on the link in the reset email when you receive it, and you'll be prompted to enter a new password.
-            You can then use the new password to login to your Shopper account.
-          </p>
-        </li>
-        <li><span class="bold-font">I would like to delete my Shopper account</span>
-          <p>
-            You can delete your account with us at any time.
-          </p>
-          <p>
-            Please note: if you choose to delete your account, you will no longer have access to information about your
-            orders that have already been paid-for or processed. You will lose any details that were stored in
-            your account.
-          </p>
-          <p>
-            If you wish to cancel your account, please contact customer us by choosing your preferred contact method.
-            We value your feedback so please be sure to let us know why you’ve chosen to cancel your account to
-            improve our future service.
-          </p>
-        </li>
-        <li><span class="bold-font">How can I change or add a delivery address?</span>
-          <p>
-            Under 'Account Details' in your account, you can modify your delivery and billing addresses or add new ones.
-          </p>
-          <p>
-            Here you can also specify default billing and delivery addresses,
-            which saves you time during the order process.
-          </p>
-          <p>
-            Confirm all changes by clicking the 'Save Address' button.
-          </p>
-          <p>
-            Tip:
-          </p>
-          <p>
-            Update your addresses before you order as delivery and invoice addresses cannot be changed once an order is
-            in progress.
-          </p>
-        </li>
-        <li><span class="bold-font">How can I re-check my order details?</span>
-          <p>
-            Before completing your order, please make sure that you have entered the correct delivery address.
-          </p>
-          <p>
-            If you do need to change anything in your order, make sure you remember to click on edit before
-            completing your order.
-          </p>
-          <p>
-            It is not possible to change your order details after the order has been placed.
-          </p>
-          <p>
-            You can view all your orders in your account.
-          </p>
-        </li>
-        <li><span class="bold-font">How do I log in to my account?</span>
-          <p>
-            If you previously created an account, just login at the top right-hand corner of the screen by clicking the
-            'My Account' button and enter your login details.
-          </p>
-          <p>
-            If you haven't yet created an account with us then please follow the instructions here.
-          </p>
-        </li>
-        <li><span class="bold-font">Do I need to create a Shopper account to order?</span>
-          <p>
-            To place an order you need have a registered account at Shopper.com. It’s really easy to create an account
-            and means you won’t have to fill in your details every time you shop with us.
-          </p>
-          <p>
-            You will be prompted to create an account when you place your first order,
-            just follow the easy on screen steps.
-          </p>
-        </li>
-        <li><span class="bold-font">Reason for fraud checks</span>
-          <p>
-            We carry out fraud checks like most online retailers for both our customers and our own protection.
-            This helps to ensure we do not process payments that might be being attempted by a non-card holder and also
-            ensures that your parcel is delivered to the correct address.
-          </p>
-          <p>
-            Our terms and conditions that you accept at time of order give us this permission.
-          </p>
-        </li>
-      </ul>
+  </div>
+  <div class="row">
+    <ul>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">How do I reset my password?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                If you need to change or reset your password just follow the on-screen instructions via the button below.
+              </p>
+              <div class="margin-button">
+                <button class="btn btn-outline-success my-2 my-sm-0 main-button" type="submit">RESET PASSWORD</button>
+              </div>
+              <p>
+                If you forgot your password, you'll need to enter your email address and hit send. You will receive an email
+                with a link in it (please note: this email may take some time to reach you and could appear in your
+                spam / junk folder).
+              </p>
+              <p>
+                Click on the link in the reset email when you receive it, and you'll be prompted to enter a new password.
+                You can then use the new password to login to your Shopper account.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">I would like to delete my Shopper account</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                You can delete your account with us at any time.
+              </p>
+              <p>
+                Please note: if you choose to delete your account, you will no longer have access to information about your
+                orders that have already been paid-for or processed. You will lose any details that were stored in
+                your account.
+              </p>
+              <p>
+                If you wish to cancel your account, please contact customer us by choosing your preferred contact method.
+                We value your feedback so please be sure to let us know why you’ve chosen to cancel your account to
+                improve our future service.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">How can I change or add a delivery address?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                Under 'Account Details' in your account, you can modify your delivery and billing addresses or add new ones.
+              </p>
+              <p>
+                Here you can also specify default billing and delivery addresses,
+                which saves you time during the order process.
+              </p>
+              <p>
+                Confirm all changes by clicking the 'Save Address' button.
+              </p>
+              <p>
+                Tip:
+              </p>
+              <p>
+                Update your addresses before you order as delivery and invoice addresses cannot be changed once an order is
+                in progress.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">How can I re-check my order details?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                Before completing your order, please make sure that you have entered the correct delivery address.
+              </p>
+              <p>
+                If you do need to change anything in your order, make sure you remember to click on edit before
+                completing your order.
+              </p>
+              <p>
+                It is not possible to change your order details after the order has been placed.
+              </p>
+              <p>
+                You can view all your orders in your account.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">How do I log in to my account?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                If you previously created an account, just login at the top right-hand corner of the screen by clicking the
+                'My Account' button and enter your login details.
+              </p>
+              <p>
+                If you haven't yet created an account with us then please follow the instructions here.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Do I need to create a Shopper account to order?</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+              To place an order you need have a registered account at Shopper.com. It’s really easy to create an account
+              and means you won’t have to fill in your details every time you shop with us.
+              </p>
+              <p>
+                You will be prompted to create an account when you place your first order,
+                just follow the easy on screen steps.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+      <li class="list-style">
+        <ngb-accordion #acc="ngbAccordion">
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <span class="bold-font">Reason for fraud checks</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+              <p>
+                We carry out fraud checks like most online retailers for both our customers and our own protection.
+                This helps to ensure we do not process payments that might be being attempted by a non-card holder and also
+                ensures that your parcel is delivered to the correct address.
+              </p>
+              <p>
+                Our terms and conditions that you accept at time of order give us this permission.
+              </p>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+      </li>
+    </ul>
   </div>
 </div>
