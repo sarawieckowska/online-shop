@@ -6,15 +6,28 @@
   margin-top: 40px;
 }
 
-.col {
+.col, col-4 {
+  margin: 0;
   padding: 0;
-  .col-4 {
-    padding: 0;
-    margin-left: 40px;
-    margin-right: -10px;
-  }
 }
 
 .margin-logo {
-  margin: -20px 40px 0 50px;
+  margin: -20px 70px 0 50px;
+}
+
+.pa-header {
+  position: absolute;
+}
+
+.pr-button {
+  position: relative;
+  right: 80px;
+}
+
+.ml-button {
+  margin-left: -4px;
+}
+
+.ml-account {
+  margin-left: -100px;
 }

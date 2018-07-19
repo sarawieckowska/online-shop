@@ -27,15 +27,20 @@ img {
 
 .bold-font {
   font-weight: bold;
-  color: #004b49;
+  color: $secondary-color;
   margin-top: 30px;
-  border: none;
 }
 
 .margin-button {
-  margin: 50px 250px;
+  margin: auto;
+  width: 30%;
 }
 
 .mt-paragraph {
   margin-top: 20px;
+}
+
+.margin-list {
+  margin: auto;
+  width: 100%;
 }

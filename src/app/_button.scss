@@ -44,3 +44,10 @@
   background-color: $secondary-color;
   border-color: $secondary-color;
 }
+
+.back-button {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+}

@@ -1,5 +1,6 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import '../../main';
+@import '../../_button';
 
 ul li > a, .category-button {
   text-decoration: none;
@@ -8,13 +9,9 @@ ul li > a, .category-button {
   color: #F7F7F7;
 }
 
-/*
-ul li ul li a {
-  text-decoration: none;
-  color: #006663;
-  margin-top: 0;
+a, .cat:hover {
+  color: #F7F7F7;
 }
-*/
 
 .navbar {
   padding: 0;
