@@ -5,3 +5,7 @@ ul li > a {
   text-decoration: none;
   color: $primary-color;
 }
+
+.dropdown-menu {
+  min-width: 7.5rem;
+}
