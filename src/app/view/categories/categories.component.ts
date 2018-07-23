@@ -9,7 +9,7 @@ import { Categories } from '../../services/Categories';
 })
 export class CategoriesComponent implements OnInit {
   categories: any;
-
+  selected: string;
   constructor(private injector: Injector) {}
 
   ngOnInit() {

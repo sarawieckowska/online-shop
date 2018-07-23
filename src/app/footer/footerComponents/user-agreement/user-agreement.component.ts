@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Location} from '@angular/common';
+import { WindowRef } from '../../../services/windowRef';
+import { ScrollToId } from '../../../services/scrollToId';
 
 @Component({
   selector: 'app-user-agreement',
@@ -7,14 +8,19 @@ import {Location} from '@angular/common';
   styleUrls: ['./user-agreement.component.scss']
 })
 export class UserAgreementComponent implements OnInit {
+  window: WindowRef;
 
-  constructor(
-    private location: Location
-  ) {}
+  constructor() {
+    this.window = new WindowRef();
+  }
 
   ngOnInit() {
   }
   goBack(): void {
-    this.location.back();
+    this.window.nativeWindow.scrollTo(0, 0);
+  }
+  scrollToElement($element): void {
+    console.log($element);
+    $element.scrollIntoView({behavior: 'instant', block: 'start', inline: 'nearest'});
   }
 }

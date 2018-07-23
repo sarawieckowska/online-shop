@@ -3,14 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { SignInComponent } from './view/sign-in/sign-in.component';
 import { SignUpComponent } from './view/sign-up/sign-up.component';
-import {CompanyInfoComponent} from './footer/footerComponents/company-info/company-info.component';
-import {PolicyComponent} from './footer/footerComponents/policy/policy.component';
-import {UserAgreementComponent} from './footer/footerComponents/user-agreement/user-agreement.component';
-import {CookieNoticeComponent} from './view/cookie-notice/cookie-notice.component';
-import {HelpComponent} from './footer/footerComponents/help/help.component';
-import {ReturnPolicyComponent} from './footer/footerComponents/return-policy/return-policy.component';
-import {DeliveryMethodsComponent} from './footer/footerComponents/delivery-methods/delivery-methods.component';
-import {ContactUsComponent} from './footer/footerComponents/contact-us/contact-us.component';
+import { CompanyInfoComponent } from './footer/footerComponents/company-info/company-info.component';
+import { PolicyComponent } from './footer/footerComponents/policy/policy.component';
+import { UserAgreementComponent } from './footer/footerComponents/user-agreement/user-agreement.component';
+import { CookieNoticeComponent } from './view/cookie-notice/cookie-notice.component';
+import { HelpComponent } from './footer/footerComponents/help/help.component';
+import { ReturnPolicyComponent } from './footer/footerComponents/return-policy/return-policy.component';
+import { DeliveryMethodsComponent } from './footer/footerComponents/delivery-methods/delivery-methods.component';
+import { ContactUsComponent } from './footer/footerComponents/contact-us/contact-us.component';
 
 const routes: Routes = [
   { path: 'login', component: SignInComponent },

@@ -27,7 +27,7 @@ import { DeliveryMethodsComponent } from './footer/footerComponents/delivery-met
 import { ContactUsComponent } from './footer/footerComponents/contact-us/contact-us.component';
 import { AppBootstrapModule } from './AppBootstrapModule';
 import { HeaderComponent } from './header/header.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({

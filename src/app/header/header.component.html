@@ -4,13 +4,13 @@
     <img src="assets/img/logo.png" class="margin-logo" alt="Shopper Logo" height="65" width="260">
   </div>
   <div class="col-6">
-    <input type="text" class="form-control" placeholder="What are you looking for?">
+    <input type="text" [(ngModel)]="searchText" placeholder="What are you looking for?">
   </div>
   <div class="col pr-button">
     <app-categories></app-categories>
   </div>
   <div class="col pr-button ml-button">
-    <button class="btn btn-outline-success my-2 my-sm-0 main-button" type="submit">Search</button>
+    <button (click)="search(searchText)" class="btn btn-outline-success my-2 my-sm-0 main-button" type="button">Search</button>
   </div>
   <div class="col ml-account">
     <app-my-account></app-my-account>
