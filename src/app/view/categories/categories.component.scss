@@ -2,23 +2,18 @@
 @import '../../main';
 @import '../../_button';
 
-ul li > a, .category-button {
-  text-decoration: none;
-  cursor: pointer;
-  text-align: center;
-  color: #F7F7F7;
-}
-
-a, .cat:hover {
-  color: #F7F7F7;
-}
-
-.navbar {
-  padding: 0;
-}
-
 .dropdown-menu {
-  margin: 0;
+  margin: 7px;
   min-width: 8.5rem;
+  left: -50px;
 }
 
+a:not([href]):not([tabindex]) {
+  color: #F7F7F7;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):hover {
+  color: #F7F7F7;
+  text-decoration: none;
+}

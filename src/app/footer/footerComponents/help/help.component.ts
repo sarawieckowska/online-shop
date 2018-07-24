@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {WindowRef} from '../../../services/windowRef';
 
 @Component({
   selector: 'app-help',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./help.component.scss']
 })
 export class HelpComponent implements OnInit {
+  window: WindowRef;
 
-  constructor() { }
+  constructor() {
+    this.window = new WindowRef();
+  }
 
   ngOnInit() {
   }
-
+  goBack(): void {
+    this.window.nativeWindow.scrollTo(0, 0);
+  }
 }

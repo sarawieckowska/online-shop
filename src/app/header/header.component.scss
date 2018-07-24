@@ -1,33 +1,25 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import '../main';
 @import '../_button';
+@import '../_img';
 
 .row {
   margin-top: 40px;
 }
 
-.col, col-4 {
+.col, col-7 {
   margin: 0;
   padding: 0;
 }
 
-.margin-logo {
-  margin: -20px 70px 0 50px;
+.mt-header {
+  margin-top: 15px;
 }
 
-.pa-header {
-  position: absolute;
+.side-margins-logo {
+  margin: 0 65px 0 40px;
 }
 
-.pr-button {
-  position: relative;
-  right: 80px;
-}
-
-.ml-button {
-  margin-left: -50px;
-}
-
-.ml-account {
-  margin-left: -90px;
+.mr-input {
+  margin-right: 45px;
 }

@@ -1,7 +1,7 @@
 <div>
   <div class="dropdown" dropdown *ngIf="categories && categories.length">
-    <a dropdownToggle role="button" class="category-button">
-      <span class="cat">{{selected || 'Categories'}}</span>
+    <a dropdownToggle role="button">
+      <span>{{selected || 'Categories'}}</span>
     </a>
     <ul *dropdownMenu class="dropdown-menu">
       <li class="dropdownElem"
@@ -24,4 +24,3 @@
     </ul>
   </div>
 </div>
-

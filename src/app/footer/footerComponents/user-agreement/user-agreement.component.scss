@@ -23,3 +23,7 @@ ul li {
 ol li a {
   text-decoration: none;
 }
+
+ol li a:hover {
+  cursor: pointer;
+}
