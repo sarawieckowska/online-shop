@@ -1,14 +1,12 @@
-<div class="mt-account">
-    <ul class="nav navbar-nav">
-      <li class="dropdown" dropdown>
-        <a dropdownToggle role="button">
-          My Account
-        </a>
-        <ul *dropdownMenu class="dropdown-menu">
-          <li class="dropdownElem"><a routerLink="/login">Login</a></li>
-          <li class="dropdownElem"><a routerLink="/register">Register</a></li>
-          <li class="dropdownElem"><a routerLink="/details">Account Details</a></li>
-        </ul>
-      </li>
+<ul class="nav navbar-nav">
+  <li class="dropdown" dropdown>
+    <a dropdownToggle role="button" class="header-style">
+      <img src="../../../assets/img/user.svg" class="header-icon" alt="My Account">
+    </a>
+    <ul *dropdownMenu class="dropdown-menu">
+      <li class="dropdownElem"><a routerLink="/login" class="account-style">Login</a></li>
+      <li class="dropdownElem"><a routerLink="/register" class="account-style">Register</a></li>
+      <li class="dropdownElem"><a routerLink="/details" class="account-style">Account Details</a></li>
     </ul>
-</div>
+  </li>
+</ul>

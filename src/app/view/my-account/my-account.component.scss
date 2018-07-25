@@ -1,16 +1,30 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import '../../main.scss';
+@import '../../_img.scss';
+@import '../../_button.scss';
 
-ul li > a {
-  text-decoration: none;
-  color: $primary-color;
-}
 
 .dropdown-menu {
   min-width: 7.5rem;
   position: absolute;
 }
 
-.mt-account {
-  margin-top: 10px;
+.header-style:hover {
+  cursor: pointer;
+}
+
+.navbar-nav[_ngcontent-c6] .dropdown-menu[_ngcontent-c6] {
+  position: absolute;
+  float: none;
+}
+
+.account-style {
+  color: $primary-color;
+  font-size: $list-font;
+}
+
+.account-style:hover {
+  color: $secondary-color;
+  font-weight: bold;
+  text-decoration: none;
 }

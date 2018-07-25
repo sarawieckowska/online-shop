@@ -1,40 +1,26 @@
-<!--<div class="container">
-  <div class="row">
-    <div class="col">
-      <img src="assets/img/logo.png" class="shopper-logo" alt="Shopper Logo">
-    </div>
-    <div class="col-6">
-      <input type="text" [(ngModel)]="searchText" placeholder="What are you looking for?">
-    </div>
-    <div class="col">
-      <app-categories></app-categories>
-    </div>
-    <div class="col">
-      <button (click)="search(searchText)" class="btn btn-outline-success my-2 my-sm-0 main-button" type="button">Search</button>
-    </div>
-    <div class="col">
-      <app-my-account></app-my-account>
-    </div>
+<div class="row mt-header">
+  <div class="col">
+    <img src="../../assets/img/logo.png" class="logo-style ml-logo" alt="Shopper Logo">
   </div>
-</div>-->
-  <div class="row">
-    <div class="col">
-      <img src="assets/img/logo.png" class="logo-style side-margins-logo" alt="Shopper Logo">
-    </div>
-    <div class="col-7 mt-header mr-input">
-      <div class="input-group">
-        <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="What are you looking for?">
-        <div class="input-group-append">
-          <button type="button" class="btn btn-outline-success my-2 my-sm-0 main-button"><app-categories>
-            </app-categories>
-          </button>
-          <button (click)="search(searchText)" class="btn btn-outline-success my-2 my-sm-0 main-button" type="button">
-            Search
-          </button>
-        </div>
+  <div class="col-7 mt-header mr-input">
+    <div class="input-group">
+      <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="What are you looking for?">
+      <div class="input-group-append">
+        <button type="button" class="btn btn-outline-success my-2 my-sm-0 main-button"><app-categories>
+          </app-categories>
+        </button>
+        <button (click)="search(searchText)" class="btn btn-outline-success my-2 my-sm-0 main-button" type="button">
+          Search
+        </button>
       </div>
     </div>
-    <div class="col mt-header">
-        <app-my-account></app-my-account>
-    </div>
   </div>
+  <div class="col mt-header">
+    <span class="inline-block">
+      <app-basket></app-basket>
+    </span>
+    <span class="inline-block">
+      <app-my-account></app-my-account>
+    </span>
+  </div>
+</div>
