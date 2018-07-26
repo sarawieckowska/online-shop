@@ -6,8 +6,8 @@
     <div class="input-group">
       <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="What are you looking for?">
       <div class="input-group-append">
-        <button type="button" class="btn btn-outline-success my-2 my-sm-0 main-button"><app-categories>
-          </app-categories>
+        <button type="button" class="btn btn-outline-success my-2 my-sm-0 main-button">
+          <app-categories></app-categories>
         </button>
         <button (click)="search(searchText)" class="btn btn-outline-success my-2 my-sm-0 main-button" type="button">
           Search

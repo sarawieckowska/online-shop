@@ -28,6 +28,7 @@ import { ContactUsComponent } from './footer/footerComponents/contact-us/contact
 import { AppBootstrapModule } from './AppBootstrapModule';
 import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ScrollToElementDirective } from './directives/scroll-to-element.directive';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ReturnPolicyComponent,
     DeliveryMethodsComponent,
     ContactUsComponent,
-    HeaderComponent
+    HeaderComponent,
+    ScrollToElementDirective
   ],
   bootstrap: [AppComponent]
 })

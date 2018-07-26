@@ -1,6 +1,7 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { WindowRef } from '../../../services/windowRef';
 import { Agreement } from '../../../services/Agreement';
+import { ScrollToElementDirective } from '../../../directives/scroll-to-element.directive';
 
 @Component({
   selector: 'app-user-agreement',
