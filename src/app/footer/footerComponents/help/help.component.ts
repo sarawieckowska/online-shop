@@ -18,4 +18,8 @@ export class HelpComponent implements OnInit {
   goBack(): void {
     this.window.nativeWindow.scrollTo(0, 0);
   }
+  scrollToElement($element): void {
+    console.log($element);
+    $element.scrollIntoView({behavior: 'instant', block: 'start', inline: 'nearest'});
+  }
 }

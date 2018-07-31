@@ -6,17 +6,17 @@
     <h2>Topics:</h2>
   </div>
   <div class="center">
-      <a href="#"><img src="../../../../assets/img/orders.svg" alt="Orders"></a>
-      <img src="../../../../assets/img/delivery.svg" alt="Delivery">
-      <img src="../../../../assets/img/refund.svg" alt="Refunds">
+    <a (click)="scrollToElement(orders)"><img src="../../../../assets/img/orders.svg" alt="Orders"></a>
+    <a (click)="scrollToElement(delivery)"><img src="../../../../assets/img/delivery.svg" alt="Delivery"></a>
+    <a (click)="scrollToElement(refunds)"><img src="../../../../assets/img/refund.svg" alt="Refunds"></a>
   </div>
   <div class="center">
-      <img src="../../../../assets/img/payment.svg" alt="Payment">
-      <img src="../../../../assets/img/voucher.svg" alt="Voucher">
-      <img src="../../../../assets/img/account.svg" alt="Account">
+    <a (click)="scrollToElement(payment)"><img src="../../../../assets/img/payment.svg" alt="Payment"></a>
+    <a (click)="scrollToElement(voucher)"><img src="../../../../assets/img/voucher.svg" alt="Voucher"></a>
+    <a (click)="scrollToElement(account)"><img src="../../../../assets/img/account.svg" alt="Account"></a>
   </div>
   <div class="row">
-    <h2>Orders</h2>
+    <h2 #orders>Orders</h2>
   </div>
   <div class="row">
     <ul class="margin-list">
@@ -200,7 +200,7 @@
     </ul>
   </div>
   <div class="row">
-    <h2>Delivery</h2>
+    <h2 #delivery>Delivery</h2>
   </div>
   <div class="row">
     <ul class="margin-list">
@@ -438,7 +438,7 @@
     </ul>
   </div>
   <div class="row">
-    <h2>Returns and Refunds</h2>
+    <h2 #refunds>Returns and Refunds</h2>
   </div>
   <div class="row">
     <ul class="margin-list">
@@ -716,7 +716,7 @@
     </ul>
   </div>
   <div class="row">
-    <h2>Payments</h2>
+    <h2 #payment>Payments</h2>
   </div>
   <div class="row">
     <ul class="margin-list">
@@ -985,7 +985,7 @@
     </ul>
   </div>
   <div class="row">
-    <h2>Vouchers</h2>
+    <h2 #voucher>Vouchers</h2>
   </div>
   <div class="row">
     <ul class="margin-list">
@@ -1116,7 +1116,7 @@
     </ul>
   </div>
   <div class="row">
-    <h2>My Account</h2>
+    <h2 #account>My Account</h2>
   </div>
   <div class="row">
     <ul class="margin-list">

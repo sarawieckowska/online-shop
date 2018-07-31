@@ -7,7 +7,7 @@ import { ScrollToElementDirective } from '../../../directives/scroll-to-element.
   selector: 'app-user-agreement',
   templateUrl: './user-agreement.component.html',
   styleUrls: ['./user-agreement.component.scss'],
-  providers: [Agreement]
+  providers: [Agreement, ScrollToElementDirective]
 })
 export class UserAgreementComponent implements OnInit {
   window: WindowRef;
