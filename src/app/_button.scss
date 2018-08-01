@@ -52,3 +52,8 @@
   z-index: 99;
   opacity: .9;
 }
+
+.btn-outline-success[_ngcontent-c2]:not(:disabled):not(.disabled):active {
+  background-color: #004b49;
+  border-color: #004b49;
+}
