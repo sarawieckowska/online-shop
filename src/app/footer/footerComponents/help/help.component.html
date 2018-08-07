@@ -6,14 +6,26 @@
     <h2>Topics:</h2>
   </div>
   <div class="center">
-    <a (click)="scrollToElement(orders)"><img src="../../../../assets/img/orders.svg" alt="Orders"></a>
-    <a (click)="scrollToElement(delivery)"><img src="../../../../assets/img/delivery.svg" alt="Delivery"></a>
-    <a (click)="scrollToElement(refunds)"><img src="../../../../assets/img/refund.svg" alt="Refunds"></a>
+    <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbTooltip="Orders">
+      <a (click)="scrollToElement(orders)"><img src="../../../../assets/img/orders.svg" alt="Orders"></a>
+    </button>
+    <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbTooltip="Delivery">
+      <a (click)="scrollToElement(delivery)"><img src="../../../../assets/img/delivery.svg" alt="Delivery"></a>
+    </button>
+    <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbTooltip="Refunds">
+      <a (click)="scrollToElement(refunds)"><img src="../../../../assets/img/refund.svg" alt="Refunds"></a>
+    </button>
   </div>
   <div class="center">
-    <a (click)="scrollToElement(payment)"><img src="../../../../assets/img/payment.svg" alt="Payment"></a>
-    <a (click)="scrollToElement(voucher)"><img src="../../../../assets/img/voucher.svg" alt="Voucher"></a>
-    <a (click)="scrollToElement(account)"><img src="../../../../assets/img/account.svg" alt="Account"></a>
+    <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbTooltip="Payment">
+      <a (click)="scrollToElement(payment)"><img src="../../../../assets/img/payment.svg" alt="Payment"></a>
+    </button>
+    <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbTooltip="Vouchers">
+      <a (click)="scrollToElement(voucher)"><img src="../../../../assets/img/voucher.svg" alt="Vouchers"></a>
+    </button>
+    <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbTooltip="Account">
+      <a (click)="scrollToElement(account)"><img src="../../../../assets/img/account.svg" alt="Account"></a>
+    </button>
   </div>
   <div class="row">
     <h2 #orders>Orders</h2>
