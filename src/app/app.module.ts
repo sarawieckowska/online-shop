@@ -44,7 +44,7 @@ import { ScrollToElementDirective } from './directives/scroll-to-element.directi
     NewsComponent,
     CareersComponent,
     HeaderComponent,
-    ScrollToElementDirective
+    ScrollToElementDirective,
   ],
   bootstrap: [AppComponent]
 })
