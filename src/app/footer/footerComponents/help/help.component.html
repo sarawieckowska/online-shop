@@ -7,28 +7,67 @@
   </div>
   <div class="center">
     <div class="hover-show-info">
-      <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbTooltip="Orders">
-        <a (click)="scrollToElement(orders)"><img src="../../../../assets/img/orders.svg" alt="Orders"></a>
+      <button type="button" class="btn btn-outline-secondary mr-2">
+        <img src="../../../../assets/img/orders.svg" alt="Orders">
       </button>
-      <span>jakis tekst</span>
+      <span>
+        <a (click)="scrollToElement(orders)">
+          <img src="../../../../assets/img/hov-orders.png" class="hover-img-2" alt="Orders">
+        </a>
+      </span>
     </div>
-    <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbTooltip="Delivery">
-      <a (click)="scrollToElement(delivery)"><img src="../../../../assets/img/delivery.svg" alt="Delivery"></a>
-    </button>
-    <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbTooltip="Refunds">
-      <a (click)="scrollToElement(refunds)"><img src="../../../../assets/img/refund.svg" alt="Refunds"></a>
-    </button>
+    <div class="hover-show-info">
+      <button type="button" class="btn btn-outline-secondary mr-2">
+        <img src="../../../../assets/img/delivery.svg" alt="Delivery">
+      </button>
+      <span>
+        <a (click)="scrollToElement(delivery)">
+          <img src="../../../../assets/img/hov-delivery.png" class="hover-img-2" alt="Delivery">
+        </a>
+      </span>
+    </div>
+    <div class="hover-show-info">
+      <button type="button" class="btn btn-outline-secondary mr-2">
+        <img src="../../../../assets/img/refund.svg" alt="Refunds">
+      </button>
+      <span>
+        <a (click)="scrollToElement(refunds)">
+          <img src="../../../../assets/img/hov-refunds.png" class="hover-img" alt="Refunds">
+        </a>
+      </span>
+    </div>
   </div>
   <div class="center">
-    <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbTooltip="Payment">
-      <a (click)="scrollToElement(payment)"><img src="../../../../assets/img/payment.svg" alt="Payment"></a>
-    </button>
-    <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbTooltip="Vouchers">
-      <a (click)="scrollToElement(voucher)"><img src="../../../../assets/img/voucher.svg" alt="Vouchers"></a>
-    </button>
-    <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbTooltip="Account">
-      <a (click)="scrollToElement(account)"><img src="../../../../assets/img/account.svg" alt="Account"></a>
-    </button>
+    <div class="hover-show-info">
+      <button type="button" class="btn btn-outline-secondary mr-2">
+        <img src="../../../../assets/img/payment.svg" alt="Payment">
+      </button>
+      <span>
+        <a (click)="scrollToElement(payment)">
+          <img src="../../../../assets/img/hov-payment.png" class="hover-img-2" alt="Payment">
+        </a>
+      </span>
+    </div>
+    <div class="hover-show-info">
+      <button type="button" class="btn btn-outline-secondary mr-2">
+        <img src="../../../../assets/img/voucher.svg" alt="Voucher">
+      </button>
+      <span>
+        <a (click)="scrollToElement(voucher)">
+          <img src="../../../../assets/img/hov-vouchers.png" class="hover-img" alt="Voucher">
+        </a>
+      </span>
+    </div>
+    <div class="hover-show-info">
+      <button type="button" class="btn btn-outline-secondary mr-2">
+        <img src="../../../../assets/img/account.svg" alt="Account">
+      </button>
+      <span>
+        <a (click)="scrollToElement(account)">
+          <img src="../../../../assets/img/hov-account.png" class="hover-img" alt="Account">
+        </a>
+      </span>
+    </div>
   </div>
   <div class="row">
     <h2 #orders>Orders</h2>
