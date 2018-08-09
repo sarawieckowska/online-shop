@@ -3,24 +3,26 @@
     <a dropdownToggle role="button">
       <span>{{selected || 'Categories'}}</span>
     </a>
-    <ul *dropdownMenu class="dropdown-menu">
-      <li class="dropdownElem"
-          *ngFor="let item of categories"
-          (click)="selected = item.name">{{item.name}}</li>
-      <!--<li class="dropdownElem"><a href="#">Blouses & Tunics</a></li>
-      <li class="dropdownElem"><a href="#">Coats</a></li>
-      <li class="dropdownElem"><a href="#">Dresses</a></li>
-      <li class="dropdownElem"><a href="#">Jackets</a></li>
-      <li class="dropdownElem"><a href="#">Jeans</a></li>
-      <li class="dropdownElem"><a href="#">Jumpers & Cardigans</a></li>
-      <li class="dropdownElem"><a href="#">Lingerie & Nightwear</a></li>
-      <li class="dropdownElem"><a href="#">Shoes</a></li>
-      <li class="dropdownElem"><a href="#">Skirts</a></li>
-      <li class="dropdownElem"><a href="#">Sports Clothing</a></li>
-      <li class="dropdownElem"><a href="#">Swimwear</a></li>
-      <li class="dropdownElem"><a href="#">Tights & Socks</a></li>
-      <li class="dropdownElem"><a href="#">Tops & T-Shirts</a></li>
-      <li class="dropdownElem"><a href="#">Trousers & Shorts</a></li>-->
-    </ul>
+      <div class="drop">
+        <ul *dropdownMenu class="dropdown-menu">
+          <li class="dropdownElem"
+              *ngFor="let item of categories"
+              (click)="selected = item.name">{{item.name}}</li>
+          <!--<li class="dropdownElem"><a href="#">Blouses & Tunics</a></li>
+          <li class="dropdownElem"><a href="#">Coats</a></li>
+          <li class="dropdownElem"><a href="#">Dresses</a></li>
+          <li class="dropdownElem"><a href="#">Jackets</a></li>
+          <li class="dropdownElem"><a href="#">Jeans</a></li>
+          <li class="dropdownElem"><a href="#">Jumpers & Cardigans</a></li>
+          <li class="dropdownElem"><a href="#">Lingerie & Nightwear</a></li>
+          <li class="dropdownElem"><a href="#">Shoes</a></li>
+          <li class="dropdownElem"><a href="#">Skirts</a></li>
+          <li class="dropdownElem"><a href="#">Sports Clothing</a></li>
+          <li class="dropdownElem"><a href="#">Swimwear</a></li>
+          <li class="dropdownElem"><a href="#">Tights & Socks</a></li>
+          <li class="dropdownElem"><a href="#">Tops & T-Shirts</a></li>
+          <li class="dropdownElem"><a href="#">Trousers & Shorts</a></li>-->
+        </ul>
+      </div>
   </div>
 </div>

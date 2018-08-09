@@ -54,3 +54,19 @@ a:hover {
   background: transparent;
   border: none;
 }
+
+.hover-show-info:hover {
+  button {
+    display: none;
+  }
+  span {
+    display: inline-block;
+  }
+}
+
+.hover-show-info {
+  display: inline-block;
+  span {
+    display: none;
+  }
+}

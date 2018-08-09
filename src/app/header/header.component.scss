@@ -3,24 +3,29 @@
 @import '../_button';
 @import '../_img';
 
-.col, .col-7 {
-  margin: 0;
-  padding: 0;
-}
-
-.mt-header {
-  margin-top: 1%;
+.inline-block {
+  display: inline-block;
 }
 
 .ml-logo {
   margin-left: 10%;
+  margin-right: 50px;
 }
 
-.mr-input {
-  margin-left: 8%;
-  margin-right: 3%;
+.mt-header {
+  margin-top: 1.2%;
 }
 
-.inline-block {
-  display: inline-block;
+.padding-buttons {
+  padding-left: 3px;
+  padding-right: 2px;
+}
+
+.padding-search {
+  padding-left: 1px;
+  padding-right: 12px;
+}
+
+.mr-app {
+  margin-right: 30px;
 }

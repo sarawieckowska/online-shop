@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {WindowRef} from '../../../services/windowRef';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-help',
@@ -9,7 +10,9 @@ import {WindowRef} from '../../../services/windowRef';
 export class HelpComponent implements OnInit {
   window: WindowRef;
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
+    console.log(route);
+    console.log(route.snapshot.params.id);
     this.window = new WindowRef();
   }
 

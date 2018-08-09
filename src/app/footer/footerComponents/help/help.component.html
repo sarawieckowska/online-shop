@@ -6,9 +6,12 @@
     <h2>Topics:</h2>
   </div>
   <div class="center">
-    <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbTooltip="Orders">
-      <a (click)="scrollToElement(orders)"><img src="../../../../assets/img/orders.svg" alt="Orders"></a>
-    </button>
+    <div class="hover-show-info">
+      <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbTooltip="Orders">
+        <a (click)="scrollToElement(orders)"><img src="../../../../assets/img/orders.svg" alt="Orders"></a>
+      </button>
+      <span>jakis tekst</span>
+    </div>
     <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbTooltip="Delivery">
       <a (click)="scrollToElement(delivery)"><img src="../../../../assets/img/delivery.svg" alt="Delivery"></a>
     </button>

@@ -5,7 +5,6 @@
 .dropdown-menu {
   margin: 7px;
   min-width: 8.5rem;
-  left: -50px;
 }
 
 a:not([href]):not([tabindex]) {
@@ -16,4 +15,9 @@ a:not([href]):not([tabindex]) {
 a:not([href]):not([tabindex]):hover {
   color: #F7F7F7;
   text-decoration: none;
+}
+
+.drop {
+  position: absolute;
+  right: 100px;
 }
