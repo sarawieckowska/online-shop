@@ -2,20 +2,20 @@
   <div class="col">
     <a routerLink="/home"><img src="../../assets/img/logo.png" class="logo-style ml-logo" alt="Shopper Logo"></a>
   </div>
-  <div class="col-5 inline-block mt-header padding-buttons">
+  <div class="col-5 mt-header">
     <input type="search" class="form-control mr-sm-4" [(ngModel)]="searchText" placeholder="What are you looking for?">
   </div>
-  <div class="col mt-header padding-buttons">
+  <span class="mt-header padding-search">
     <button type="button" class="btn btn-outline-success main-button">
       <app-categories></app-categories>
     </button>
-  </div>
-  <div class="col mt-header padding-search">
+  </span>
+  <span class="mt-header padding-search">
     <button (click)="search(searchText)" class="btn btn-outline-success main-button" type="submit">
       Search
     </button>
-  </div>
-  <div class="col inline-block mt-header mr-app">
+  </span>
+  <div class="col mt-header relative-position mr-app">
     <span class="inline-block">
       <app-basket></app-basket>
     </span>
