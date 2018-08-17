@@ -14,8 +14,6 @@ import { MyAccountComponent } from './view/my-account/my-account.component';
 import { CategoriesComponent } from './view/categories/categories.component';
 import { CookiesComponent } from './footer/footerComponents/cookies/cookies.component';
 import { FooterComponent } from './footer/footer.component';
-import { NewsComponent } from './footer/footerComponents/news/news.component';
-import { CareersComponent } from './footer/footerComponents/careers/careers.component';
 import { AppBootstrapModule } from './AppBootstrapModule';
 import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -41,8 +39,6 @@ import { ScrollToElementDirective } from './directives/scroll-to-element.directi
     CategoriesComponent,
     CookiesComponent,
     FooterComponent,
-    NewsComponent,
-    CareersComponent,
     HeaderComponent,
     ScrollToElementDirective,
   ],

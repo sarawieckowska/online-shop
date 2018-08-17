@@ -11,10 +11,12 @@
   <div>
     <p>In this User Agreement:</p>
       <ol class="list-elements">
-        <li *ngFor="let item of agreement" (click)="selected = item.name">{{item.name}}</li>
-        <li><a appScrollToElement>Introduction</a></li>
+        <li *ngFor="let item of agreement">
+          <a (click)="scrollToElement(item.name)">{{ item.title }}</a>
+        </li>
+        <!--<li><a appScrollToElement>Introduction</a></li>
         <li><a (click)="scrollToElement(about)">About Shopper</a></li>
-        <li><a (click)="scrollToElement(shopper)">Using Shopper</a></li>
+        <li><a (click)="scrollToElement('shopper')">Using Shopper</a></li>
         <li><a (click)="scrollToElement(policy)">Policy Enforcement</a></li>
         <li><a (click)="scrollToElement(fees)">Fees</a></li>
         <li><a (click)="scrollToElement(listing)">Listing Conditions</a></li>
@@ -29,11 +31,11 @@
           Shopper Money Back Guarantee</a></li>
         <li><a (click)="scrollToElement(disclaimer)">Disclaimer of Warranties; Limitation of Liability</a></li>
         <li><a (click)="scrollToElement(release)">Release</a></li>
-        <li><a (click)="scrollToElement(indemnity)">Indemnity</a></li>
+        <li><a (click)="scrollToElement(indemnity)">Indemnity</a></li>-->
       </ol>
   </div>
-  <div class="row">
-    <h5 #introduction>1. Introduction</h5>
+  <!--<div class="row">
+    <h5 #intro>1. Introduction</h5>
       <p>
         This User Agreement, the Mobile devices terms, and all policies and additional terms posted on and in our sites,
         applications, tools and services (collectively "Services") set out the terms on which Shopper offers you access to
@@ -80,7 +82,7 @@
       </p>
   </div>
   <div class="row">
-    <h5 #shopper>3. Using Shopper</h5>
+    <h5 id="shopper">3. Using Shopper</h5>
       <p>
         In connection with using or accessing the Services you will not:
       </p>
@@ -390,16 +392,15 @@
           You (as seller) authorize Shopper to place the return shipping label cost on your invoice, subject to your
           automatic payment method on file when:
         </p>
-        <p>
-          <ul>
-            <li>A Shopper-generated return shipping label is used, and the seller is responsible for its cost;</li>
-            <li>Returns have been automated;</li>
-            <li>You fail to send your buyer a return shipping label and, instead, an Shopper-generated
-              shipping label is used; and/or</li>
-            <li>A transaction is cancelled, and to refund the buyer, you (as seller) authorize Shopper to request that
-              PayPal remove the refund amount (in same or other currency) from your PayPal account.
-              See canceling a transaction for more details.</li>
-          </ul>
+        <ul>
+          <li>A Shopper-generated return shipping label is used, and the seller is responsible for its cost;</li>
+          <li>Returns have been automated;</li>
+          <li>You fail to send your buyer a return shipping label and, instead, an Shopper-generated
+            shipping label is used; and/or</li>
+          <li>A transaction is cancelled, and to refund the buyer, you (as seller) authorize Shopper to request that
+            PayPal remove the refund amount (in same or other currency) from your PayPal account.
+            See canceling a transaction for more details.</li>
+        </ul>
       <h6>Global Shipping Program</h6>
         <p>
           One of the ways that we may make shopper.com listings available to international buyers on shopper.com and on
@@ -486,7 +487,6 @@
           <li>your need to modify practices, content, or behavior, or your loss of or inability to do business, as a
             result of changes to this User Agreement or our policies.</li>
         </ul>
-
       <p>
         Some jurisdictions do not allow the disclaimer of warranties or exclusion of damages, so such disclaimers
         and exclusions may not apply to you.
@@ -518,7 +518,7 @@
         made by any third party due to or arising out of your breach of this User Agreement, your improper use of
         Shopper's Services or your breach of any law or the rights of a third party.
       </p>
-  </div>
+  </div>-->
   <button (click)="goBack()" class="btn btn-outline-success my-2 my-sm-0 main-button back-button" type="submit">
     BACK TO TOP
   </button>

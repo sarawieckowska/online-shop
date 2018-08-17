@@ -22,28 +22,16 @@ p {
   font-size: $list-font;
 }
 
-img {
+.help-img {
+  padding: 20px 50px 30px 50px;
+}
+
+.hov-img {
   padding: 10px 40px 20px 40px;
-}
-
-.bold-font {
-  font-weight: bold;
-  color: $secondary-color;
-  margin-top: 30px;
-}
-
-.margin-button {
-  margin: auto;
-  width: 30%;
 }
 
 .mt-paragraph {
   margin-top: 20px;
-}
-
-.margin-list {
-  margin: auto;
-  width: 100%;
 }
 
 a:hover {

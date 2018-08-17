@@ -32,7 +32,6 @@ export class UserAgreementComponent implements OnInit {
     this.window.nativeWindow.scrollTo(0, 0);
   }
   scrollToElement($element): void {
-    console.log($element);
-    $element.scrollIntoView({behavior: 'instant', block: 'start', inline: 'nearest'});
+    document.getElementById($element).scrollIntoView({behavior: 'instant', block: 'start', inline: 'nearest'});
   }
 }
