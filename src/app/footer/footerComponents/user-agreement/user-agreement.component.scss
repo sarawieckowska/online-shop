@@ -9,6 +9,7 @@
 h1, h5, h6 {
   color: $secondary-color;
   margin: auto;
+  text-align: center;
   padding: 30px 0 20px 0;
 }
 
@@ -16,14 +17,10 @@ p, li {
   font-size: $p-font;
 }
 
-ul li {
-  font-size: $list-font;
-}
-
-ol li a {
-  text-decoration: none;
-}
-
 ol li a:hover {
   cursor: pointer;
+}
+
+.list-elements {
+  list-style: none;
 }

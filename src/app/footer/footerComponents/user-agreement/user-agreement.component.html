@@ -30,7 +30,22 @@
       </ol>
   </div>
   <div class="row">
-    <h5 #intro>1. Introduction</h5>
+    <ol class="list-elements">
+      <li *ngFor="let item of agreement">
+        <h5>{{item.title}}</h5>
+        <p>{{ item.paragraph }}</p>
+        <p>{{ item.paragraph1 }}</p>
+        <p>{{ item.paragraph2 }}</p>
+        <p>{{ item.list }}</p>
+        <p>{{ item.list1 }}</p>
+        <p>{{ item.list2 }}</p>
+        <p>{{ item.list3 }}</p>
+        <p>{{ item.list4 }}</p>
+        <p>{{ item.list5 }}</p>
+      </li>
+    </ol>
+  </div>
+    <!--<h5 #intro>1. Introduction</h5>
       <p>
         This User Agreement, the Mobile devices terms, and all policies and additional terms posted on and in our sites,
         applications, tools and services (collectively "Services") set out the terms on which Shopper offers you access to
@@ -430,7 +445,7 @@
         made by any third party due to or arising out of your breach of this User Agreement, your improper use of
         Shopper's Services or your breach of any law or the rights of a third party.
       </p>
-  </div>
+  </div>-->
   <button (click)="goBack()" class="btn btn-outline-success my-2 my-sm-0 main-button back-button" type="submit">
     BACK TO TOP
   </button>
