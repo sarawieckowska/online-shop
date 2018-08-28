@@ -1,5 +1,8 @@
-<app-cookies *ngIf="!isAccepted" (cookiesAccepted)="onCookiesAccepted($event)"></app-cookies>
-<div class="container-fluid">
+<div class="container">
+  <app-first-header></app-first-header>
+</div>
+<div class="separator"></div>
+<div class="container">
   <app-header></app-header>
 </div>
 <div class="separator"></div>
@@ -7,4 +10,7 @@
 <div class="separator"></div>
 <div class="container">
   <app-footer></app-footer>
+</div>
+<div class="fixed-position">
+  <app-cookies *ngIf="!isAccepted" (cookiesAccepted)="onCookiesAccepted($event)"></app-cookies>
 </div>

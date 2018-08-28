@@ -6,21 +6,13 @@
     <input type="search" class="form-control mr-sm-4" [(ngModel)]="searchText" placeholder="What are you looking for?">
   </div>
   <span class="mt-header padding-search">
-    <button type="button" class="btn btn-outline-success main-button">
-      <app-categories></app-categories>
-    </button>
-  </span>
-  <span class="mt-header padding-search">
     <button (click)="search(searchText)" class="btn btn-outline-success main-button" type="submit">
       Search
     </button>
   </span>
-  <div class="col mt-header relative-position mr-app">
-    <span class="inline-block">
-      <app-basket></app-basket>
-    </span>
-    <span class="inline-block mt-header">
-      <app-my-account></app-my-account>
-    </span>
-  </div>
+  <span class="mt-header padding-search">
+    <button type="button" class="btn btn-outline-success main-button">
+      <app-categories></app-categories>
+    </button>
+  </span>
 </div>

@@ -18,6 +18,8 @@ import { AppBootstrapModule } from './AppBootstrapModule';
 import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ScrollToElementDirective } from './directives/scroll-to-element.directive';
+import { ProductsComponent } from './view/products/products.component';
+import { FirstHeaderComponent } from './header/first-header/first-header.component';
 
 
 @NgModule({
@@ -41,6 +43,8 @@ import { ScrollToElementDirective } from './directives/scroll-to-element.directi
     FooterComponent,
     HeaderComponent,
     ScrollToElementDirective,
+    ProductsComponent,
+    FirstHeaderComponent,
   ],
   bootstrap: [AppComponent]
 })

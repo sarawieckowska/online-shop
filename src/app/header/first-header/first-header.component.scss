@@ -1,0 +1,48 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '../../main';
+@import '../../_button';
+@import '../../_img';
+
+.items {
+  display: flex;
+  align-items: center;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.justify-middle {
+  justify-content: center;
+}
+
+.items-padding {
+  margin-right: 2rem;
+}
+
+h6 {
+  font-size: $list-font;
+}
+
+p {
+  font-size: $list-font;
+  color: $primary-color;
+}
+
+p:hover {
+  color: $secondary-color;
+}
+
+.insert-content::after {
+  content: "|";
+}
+
+.pl-contact {
+  padding-left: .2rem;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+
