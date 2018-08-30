@@ -3,12 +3,7 @@
 @import '../_button';
 @import '../_img';
 
-.col-5 {
-  padding-right: 5px;
-}
-
 .ml-logo {
-  margin-right: 50px;
   margin-top: 20px;
 }
 
@@ -17,12 +12,27 @@
   margin-bottom: 3%;
 }
 
-.mr-app {
-  text-align: right;
-  right: 35px;
+.padding-search {
+  padding-left: 3px;
 }
 
-.padding-search {
-  padding-left: 1px;
-  padding-right: 5px;
+.pl-products {
+  padding-left: 40px;
 }
+
+.form-control {
+  max-width: 50%;
+}
+
+.form-control-sm {
+  padding: .18rem .5rem;
+}
+
+.ml-last-section {
+  margin-left: 21px;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+

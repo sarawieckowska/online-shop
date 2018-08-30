@@ -31,10 +31,26 @@ textarea {
   resize: none;
 }
 
+.header-font {
+  font-size: $list-font;
+}
+
+.paragraph-font {
+  font-size: $header-6-font;
+}
+
 .dropdownElem {
   color: $primary-color;
   font-size: $list-font;
   padding: 5px 0 5px 15px;
+}
+
+.black-text {
+  color: black;
+}
+
+.black-text:hover {
+  color: $secondary-color;
 }
 
 .dropdownElem:hover {
@@ -111,4 +127,47 @@ textarea {
   flex-wrap: wrap;
   min-height: 2.75rem;
   padding: 0;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.justify-middle {
+  justify-content: center;
+}
+
+.img-position {
+  top: -8px;
+}
+
+.text-position {
+  top: 4px;
+}
+
+.hover-show-info:hover {
+  .hover-hide {
+    display: none;
+  }
+  .hover-show {
+    display: inline-block;
+  }
+}
+
+.hover-show-info {
+  display: inline-block;
+  .hover-show {
+    display: none;
+  }
+}
+
+.account-style {
+  color: $primary-color;
+  font-size: $list-font;
+}
+
+.account-style:hover {
+  color: $secondary-color;
+  font-weight: bold;
+  text-decoration: none;
 }

@@ -3,7 +3,6 @@
 @import '../../_img.scss';
 @import '../../_button.scss';
 
-
 .dropdown-menu {
   min-width: 7.5rem;
   position: absolute;
@@ -14,19 +13,16 @@
   float: none;
 }
 
-.account-style {
-  color: $primary-color;
-  font-size: $list-font;
-}
-
-.account-style:hover {
-  color: $secondary-color;
-  font-weight: bold;
-  text-decoration: none;
-}
-
 .drop {
   position: absolute;
-  top: 30px;
-  right: 70px;
+  top: 32px;
+  right: 50px;
+}
+
+p {
+  margin: 0;
+}
+
+.hover-show {
+  right: -36px;
 }

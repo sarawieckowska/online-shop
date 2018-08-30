@@ -2,27 +2,37 @@
   <div class="col-lg-4 inline-block items">
     <div class="relative-position inline-block">
       <a routerLink="user-agreement">
-        <p class="insert-content margin-basket-account">
+        <p class="insert-content margin-basket-account header-font middle-part">
           User Agreement
         </p>
       </a>
     </div>
     <div class="relative-position inline-block">
-      <a routerLink="contact-us">
-        <p class="pl-contact margin-basket-account">
-           Contact
+      <a routerLink="policies">
+        <p class="pl-contact margin-basket-account middle-part">
+           Policies
         </p>
       </a>
     </div>
   </div>
   <div class="col-lg-4 inline-block items justify-middle">
     <div class="relative-position">
-      <h6 class="margin-basket-account">
+      <h6 class="margin-basket-account header-font">
         FREE shipping and returns!*
+        <!--Free Shipping on Orders Over $50-->
       </h6>
     </div>
   </div>
   <div class="col-lg-4 inline-block items flex-end">
+    <div class="relative-position items-padding inline-block hover-show-info">
+      <a routerLink="contact-us">
+        <img src="../../../assets/img/pin.svg"
+             class="header-icon margin-basket-account pin-position absolute-position hover-hide" alt="Map pin">
+        <p class="header-font find-position absolute-position hover-show">
+          Find Us
+        </p>
+      </a>
+    </div>
     <div class="relative-position items-padding inline-block ">
       <app-basket></app-basket>
     </div>

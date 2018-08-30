@@ -22,14 +22,6 @@ p {
   font-size: $list-font;
 }
 
-.help-img {
-  padding: 20px 50px 30px 50px;
-}
-
-.hov-img {
-  padding: 10px 40px 20px 40px;
-}
-
 .mt-paragraph {
   margin-top: 20px;
 }
@@ -38,24 +30,46 @@ a:hover {
   cursor: pointer;
 }
 
-.btn-outline-secondary {
-  color: #6c757d;
-  background: transparent;
-  border: none;
+.top-position {
+  top: 480px;
 }
 
-.hover-show-info:hover {
-  button {
-    display: none;
-  }
-  span {
-    display: inline-block;
-  }
+.top-position-del {
+  top: 490px;
 }
 
-.hover-show-info {
-  display: inline-block;
-  span {
-    display: none;
-  }
+.top-position-ref {
+  top: 460px;
+}
+
+.left-position-1 {
+  left: 320px;
+}
+
+.left-position-2 {
+  left: 570px;
+}
+
+.left-position-3 {
+  right: 260px;
+}
+
+.left-position-4 {
+  right: 310px;
+}
+
+.row-2-position {
+  top: 680px;
+}
+
+.mt-orders {
+  margin-top: 350px;
+}
+
+.top-hov-position {
+  top: 530px;
+}
+
+.top-hov-2-position {
+  top: 740px;
 }

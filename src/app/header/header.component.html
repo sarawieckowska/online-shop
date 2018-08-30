@@ -1,18 +1,43 @@
 <div class="row">
-  <div class="col">
-    <a routerLink="/home"><img src="../../assets/img/logo.png" class="logo-style ml-logo" alt="Shopper Logo"></a>
+  <div class="col-4">
+    <a routerLink="/home">
+      <img src="../../assets/img/logo.png" class="logo-style ml-logo" alt="Shopper Logo">
+    </a>
   </div>
-  <div class="col-5 mt-header">
-    <input type="search" class="form-control mr-sm-4" [(ngModel)]="searchText" placeholder="What are you looking for?">
+  <div class="col-4 mt-header paragraph-font">
+    <div class="inline-block">
+      <a routerLink="products" class="black-text">
+        Men
+      </a>
+    </div>
+    <div class="inline-block pl-products">
+      <a routerLink="products" class="black-text">
+        Women
+      </a>
+    </div>
+    <div class="inline-block pl-products">
+      <a routerLink="products" class="black-text">
+        Accessories
+      </a>
+    </div>
+    <div class="inline-block pl-products">
+      <a routerLink="products" class="black-text">
+        Sale
+      </a>
+    </div>
   </div>
-  <span class="mt-header padding-search">
-    <button (click)="search(searchText)" class="btn btn-outline-success main-button" type="submit">
-      Search
-    </button>
-  </span>
-  <span class="mt-header padding-search">
-    <button type="button" class="btn btn-outline-success main-button">
-      <app-categories></app-categories>
-    </button>
-  </span>
+  <div class="col-4 mt-header">
+    <input type="search" class="form-control form-control-sm inline-block ml-last-section"
+           [(ngModel)]="searchText" placeholder="Search for products">
+    <span class="padding-search">
+      <button (click)="search(searchText)" class="btn btn-sm main-button inline-block" type="submit">
+        Search
+      </button>
+    </span>
+    <span class="padding-search">
+      <button type="button" class="btn btn-sm main-button inline-block">
+        <app-categories></app-categories>
+      </button>
+    </span>
+  </div>
 </div>

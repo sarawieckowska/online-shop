@@ -8,28 +8,16 @@
   align-items: center;
 }
 
-.flex-end {
-  justify-content: flex-end;
-}
-
-.justify-middle {
-  justify-content: center;
-}
-
 .items-padding {
-  margin-right: 2rem;
+  margin-right: 4rem;
 }
 
-h6 {
-  font-size: $list-font;
-}
-
-p {
+.middle-part {
   font-size: $list-font;
   color: $primary-color;
 }
 
-p:hover {
+.middle-part:hover {
   color: $secondary-color;
 }
 
@@ -45,4 +33,15 @@ a:link, a:visited {
   text-decoration: none;
 }
 
+p {
+  margin: 0;
+}
 
+.pin-position {
+  top: -20px;
+}
+
+.find-position {
+  top: -16px;
+  color: black;
+}

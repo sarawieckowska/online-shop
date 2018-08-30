@@ -13,6 +13,7 @@ import { DeliveryMethodsComponent } from './footer/footerComponents/delivery-met
 import { ContactUsComponent } from './footer/footerComponents/contact-us/contact-us.component';
 import { BasketComponent } from './view/basket/basket.component';
 import { HomepageComponent } from './view/homepage/homepage.component';
+import { ProductsComponent } from './view/products/products.component';
 
 const routes: Routes = [
   { path: 'login', component: SignInComponent },
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: 'delivery-methods', component: DeliveryMethodsComponent },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'basket', component: BasketComponent },
-  { path: 'home', component: HomepageComponent }
+  { path: 'home', component: HomepageComponent },
+  { path: 'products', component: ProductsComponent }
 ];
 
 @NgModule({
@@ -36,4 +38,4 @@ const routes: Routes = [
 export class AppRoutingModule {}
 export const routingComponents = [SignInComponent, SignUpComponent, CompanyInfoComponent, PolicyComponent, UserAgreementComponent,
   CookieNoticeComponent, HelpComponent, ReturnPolicyComponent, DeliveryMethodsComponent, ContactUsComponent, BasketComponent,
-  HomepageComponent];
+  HomepageComponent, ProductsComponent];

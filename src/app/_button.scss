@@ -4,7 +4,7 @@
 
 .main-button {
   color: $background-color;
-  font-size: $header-6-font;
+  font-size: $p-font;
   background-color: $primary-color;
   border-color: $primary-color;
 }
@@ -61,4 +61,8 @@
 .margin-button {
   margin: auto;
   width: 30%;
+}
+
+.btn {
+  border: 0;
 }

@@ -7,17 +7,11 @@
   min-width: 10rem;
 }
 
-a:not([href]):not([tabindex]) {
-  color: #F7F7F7;
-  text-decoration: none;
-}
-
-a:not([href]):not([tabindex]):hover {
-  color: #F7F7F7;
-  text-decoration: none;
-}
-
 .drop {
   position: relative;
   right: 20px;
+}
+
+a:link, a:visited {
+  text-decoration: none;
 }
