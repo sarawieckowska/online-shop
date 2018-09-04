@@ -1,22 +1,22 @@
 import { Component, Injector, OnInit } from '@angular/core';
-import { Product } from '../../services/Product';
+import { Products } from '../../services/Products';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss'],
-  providers: [Product]
+  providers: [Products]
 })
 export class ProductsComponent implements OnInit {
-  product: any;
+  products: any;
   constructor(private injector: Injector) { }
 
   ngOnInit() {
     const self = this;
-    const products = this.injector.get(Product);
+    const products = this.injector.get(Products);
     products.getProducts()
       .then(function (response) {
-        self.product = response;
+        self.products = response;
       }).catch(function (error) {
       console.log(error);
     });

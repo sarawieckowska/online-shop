@@ -5,7 +5,7 @@ import * as config from '../config/config';
 @Injectable({
   providedIn: 'root'
 })
-export class Product {
+export class Products {
   getProducts() {
     return this.http.get(config.default.mantle.products).toPromise();
   }

@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'policies', component: PolicyComponent },
   { path: 'user-agreement', component: UserAgreementComponent },
   { path: 'cookie-notice', component: CookieNoticeComponent },
-  { path: 'help/:id', component: HelpComponent },
+  { path: 'help', component: HelpComponent },
   { path: 'return-policy', component: ReturnPolicyComponent },
   { path: 'delivery-methods', component: DeliveryMethodsComponent },
   { path: 'contact-us', component: ContactUsComponent },

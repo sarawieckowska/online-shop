@@ -5,10 +5,32 @@
     </h2>
   </div>
   <div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="my-1 mr-2 header-font" for="inputGroupSelect01">Sort by:</label>
+        </div>
+        <select class="form-control form-control-sm header-font" id="inputGroupSelect01">
+          <option selected>Most popular</option>
+          <option value="1" (click)="sortType('price')" [class.active]="sortBy === 'price'">
+            Lowest price
+          </option>
+          <option value="2">Highest price</option>
+          <option value="3">Sale</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
     <div>
       <ul>
-        <li *ngFor="let item of product">
+        <li *ngFor="let item of products">
+          {{item.price}}
           {{item.title}}
+          {{item.description}}
+          {{item.gender}}
         </li>
       </ul>
     </div>

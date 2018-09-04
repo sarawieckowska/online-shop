@@ -9,8 +9,6 @@ export class Agreement {
   getAgreement() {
     return this.http.get(config.default.mantle.agreements).toPromise();
   }
-
-
   constructor(private http: HttpClient) {
   }
 }
