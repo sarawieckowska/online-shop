@@ -14,7 +14,7 @@
         </div>
         <select class="form-control form-control-sm header-font" id="inputGroupSelect01">
           <option selected>Most popular</option>
-          <option value="1" (click)="sortType('price')" [class.active]="sortBy === 'price'">
+          <option value="1" (click)="sortType('price')">
             Lowest price
           </option>
           <option value="2">Highest price</option>
@@ -24,14 +24,26 @@
     </div>
   </div>
   <div class="row">
-    <div>
+    <div class="col-4">
       <ul>
-        <li *ngFor="let item of products">
-          {{item.price}}
-          {{item.title}}
-          {{item.description}}
-          {{item.gender}}
+        <li *ngFor="let item of products" class="sortProducts">
+          <p>
+            £{{item.price}}
+          </p>
+          <p>
+            {{item.title}}
+          </p>
+          <p>
+            {{item.description}}
+          </p>
+          <p>
+            {{item.gender}}
+          </p>
         </li>
+        <!--sorting items-->
+        <!--<li *ngFor="let value of items">
+          {{value.price}} {{value.title}}
+        </li>-->
       </ul>
     </div>
   </div>
