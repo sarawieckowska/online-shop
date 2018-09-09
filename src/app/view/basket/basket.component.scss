@@ -1,16 +1,25 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import '../../main.scss';
 @import '../../_button.scss';
-@import '../../_img.scss';
 
-img {
-  margin-top: 5px;
+h5 {
+  color: $secondary-color;
+  margin: auto;
+  padding: 50px 0 40px 0;
 }
+/*
 
-p {
-  margin: 0;
+.btn-margin {
+  margin: 30px 0 40px;
+  padding: 5px 20px;
 }
+*/
 
-.hover-show {
-  right: -30px;
+.border-basket {
+  border: 1px solid #ddd;
+  padding: 20%;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+  display: block;
+  max-width: 70%;
 }

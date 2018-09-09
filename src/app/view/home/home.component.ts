@@ -3,11 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-homepage',
-  templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.scss']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class HomepageComponent implements OnInit {
+export class HomeComponent implements OnInit {
   images: Array<string>;
 
   constructor(private _http: HttpClient) {}

@@ -12,8 +12,9 @@ import { ReturnPolicyComponent } from './footer/footerComponents/return-policy/r
 import { DeliveryMethodsComponent } from './footer/footerComponents/delivery-methods/delivery-methods.component';
 import { ContactUsComponent } from './footer/footerComponents/contact-us/contact-us.component';
 import { BasketComponent } from './view/basket/basket.component';
-import { HomepageComponent } from './view/homepage/homepage.component';
+import { HomeComponent } from './view/home/home.component';
 import { ProductsComponent } from './view/products/products.component';
+import { AccountDetailsComponent } from './view/account-details/account-details.component';
 
 const routes: Routes = [
   { path: 'login', component: SignInComponent },
@@ -27,8 +28,9 @@ const routes: Routes = [
   { path: 'delivery-methods', component: DeliveryMethodsComponent },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'basket', component: BasketComponent },
-  { path: 'home', component: HomepageComponent },
-  { path: 'products', component: ProductsComponent }
+  { path: 'home', component: HomeComponent },
+  { path: 'products', component: ProductsComponent },
+  { path: 'account-details', component: AccountDetailsComponent }
 ];
 
 @NgModule({
@@ -38,4 +40,4 @@ const routes: Routes = [
 export class AppRoutingModule {}
 export const routingComponents = [SignInComponent, SignUpComponent, CompanyInfoComponent, PolicyComponent, UserAgreementComponent,
   CookieNoticeComponent, HelpComponent, ReturnPolicyComponent, DeliveryMethodsComponent, ContactUsComponent, BasketComponent,
-  HomepageComponent, ProductsComponent];
+  HomeComponent, ProductsComponent, AccountDetailsComponent];

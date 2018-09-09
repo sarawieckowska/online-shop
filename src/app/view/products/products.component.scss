@@ -1,3 +1,10 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import '../../main';
 @import '../../_button';
+
+h2 {
+  color: $secondary-color;
+  margin: auto;
+  text-align: center;
+  padding: 30px 0 20px 0;
+}

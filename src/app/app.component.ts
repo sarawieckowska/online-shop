@@ -1,6 +1,6 @@
-import {Component, Injector, OnInit} from '@angular/core';
-import {AuthService} from './services/AuthService';
-import {User} from './models/User';
+import { Component, Injector, OnInit } from '@angular/core';
+import { AuthService } from './services/AuthService';
+import { User } from './models/User';
 
 @Component({
   selector: 'app-root',

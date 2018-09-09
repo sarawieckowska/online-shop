@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 
-import { AccountDetailsComponent } from './view/account-details/account-details.component';
 import { HistoryComponent } from './view/history/history.component';
 import { PaymentComponent } from './view/payment/payment.component';
 import { MyAccountComponent } from './view/my-account/my-account.component';
@@ -33,7 +32,6 @@ import { FirstHeaderComponent } from './header/first-header/first-header.compone
   declarations: [
     AppComponent,
     routingComponents,
-    AccountDetailsComponent,
     HistoryComponent,
     PaymentComponent,
     MyAccountComponent,

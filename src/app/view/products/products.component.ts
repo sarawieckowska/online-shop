@@ -1,5 +1,6 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { Products } from '../../services/Products';
+import {WindowRef} from '../../services/windowRef';
 
 @Component({
   selector: 'app-products',
@@ -8,6 +9,7 @@ import { Products } from '../../services/Products';
   providers: [Products]
 })
 export class ProductsComponent implements OnInit {
+  window: WindowRef;
   // database for sorting
   /*public items = [
     {'price': 18, 'title': 'blouse'},
@@ -17,7 +19,9 @@ export class ProductsComponent implements OnInit {
     {'price': 38, 'title': 'watch'}];
   public display: any = [];*/
   products: any;
-  constructor(private injector: Injector) { }
+  constructor(private injector: Injector) {
+    this.window = new WindowRef();
+  }
 
   ngOnInit() {
     const self = this;
@@ -30,5 +34,8 @@ export class ProductsComponent implements OnInit {
     });
     // sorting items
     /*this.display = this.items.sort((a, b) => b.price - a.price);*/
+  }
+  goBack(): void {
+    this.window.nativeWindow.scrollTo(0, 0);
   }
 }
