@@ -16,3 +16,15 @@ h5 {
 .less-width {
   max-width: 11%;
 }
+
+.calendar {
+  width: 2.75rem;
+  background-image: url(../../../assets/img/calendar.svg)!important;
+  background-repeat: no-repeat;
+  background-size: 23px;
+  background-position: center;
+}
+
+.btn {
+  border: 1px solid #ced4da;
+}

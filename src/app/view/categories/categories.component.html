@@ -5,7 +5,7 @@
     <div class="drop">
       <ul *dropdownMenu class="dropdown-menu">
         <li class="dropdownElem" *ngFor="let item of categories" (click)="selected = item.name">
-          <a routerLink="/company" class="account-style">{{item.name}}</a>
+          <a class="account-style">{{item.name}}</a>
         </li>
       </ul>
     </div>

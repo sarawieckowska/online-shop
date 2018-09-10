@@ -11,7 +11,7 @@
           </label>
         </div>
         <div class="col-4 form-group inline-block">
-          <input class="form-control form-control-sm" id="firstName">
+          <input type="text" class="form-control form-control-sm" id="firstName">
         </div>
         <div class="col-2 form-group inline-block ta-left header-font less-width">
           <label class="form-check-label" for="lastName">
@@ -19,7 +19,7 @@
           </label>
         </div>
         <div class="col-4 form-group inline-block">
-          <input class="form-control form-control-sm" id="lastName">
+          <input type="text" class="form-control form-control-sm" id="lastName">
         </div>
       </div>
       <div>
@@ -29,7 +29,13 @@
           </label>
         </div>
         <div class="col-4 form-group inline-block">
-          <input class="form-control form-control-sm" id="dob">
+          <div class="input-group">
+            <input type="date" class="form-control form-control-sm" placeholder="yyyy-mm-dd" name="dp"
+                   ngbDatepicker #d="ngbDatepicker" id="dob">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+            </div>
+          </div>
         </div>
         <div class="col-2 form-group inline-block ta-left header-font less-width">
           <label class="form-check-label" for="email">
@@ -37,7 +43,7 @@
           </label>
         </div>
         <div class="col-4 form-group inline-block">
-          <input class="form-control form-control-sm" id="email">
+          <input type="email" class="form-control form-control-sm" id="email">
         </div>
       </div>
       <div>
@@ -64,7 +70,7 @@
           </label>
         </div>
         <div class="col-4 form-group inline-block">
-          <input class="form-control form-control-sm" id="phone">
+          <input type="tel" class="form-control form-control-sm" id="phone">
         </div>
       </div>
       <div class="col-12">
@@ -86,7 +92,7 @@
           </label>
         </div>
         <div class="col-4 form-group inline-block">
-          <input class="form-control form-control-sm" id="address">
+          <input type="text" class="form-control form-control-sm" id="address">
         </div>
         <div class="col-2 form-group inline-block ta-left header-font less-width">
           <label class="form-check-label" for="address2">
@@ -94,17 +100,17 @@
           </label>
         </div>
         <div class="col-4 form-group inline-block">
-          <input class="form-control form-control-sm" id="address2">
+          <input type="text" class="form-control form-control-sm" id="address2">
         </div>
       </div>
       <div>
         <div class="col-2 form-group inline-block ta-left header-font less-width">
           <label class="form-check-label" for="zip">
-            ZIP/postal code
+            Postal code
           </label>
         </div>
         <div class="col-4 form-group inline-block">
-          <input class="form-control form-control-sm" id="zip">
+          <input type="text" class="form-control form-control-sm" id="zip">
         </div>
         <div class="col-2 form-group inline-block ta-left header-font less-width">
           <label class="form-check-label" for="town">
@@ -112,7 +118,7 @@
           </label>
         </div>
         <div class="col-4 form-group inline-block">
-          <input class="form-control form-control-sm" id="town">
+          <input type="text" class="form-control form-control-sm" id="town">
         </div>
       </div>
       <div>
@@ -122,7 +128,7 @@
           </label>
         </div>
         <div class="col-4 form-group inline-block">
-          <input class="form-control form-control-sm" id="district">
+          <input type="text" class="form-control form-control-sm" id="district">
         </div>
         <div class="col-2 form-group inline-block ta-left header-font less-width">
           <label class="form-check-label" for="country">
@@ -130,7 +136,7 @@
           </label>
         </div>
         <div class="col-4 form-group inline-block">
-          <input class="form-control form-control-sm" id="country">
+          <input type="text" class="form-control form-control-sm" id="country">
         </div>
       </div>
       <div class="col-12">
