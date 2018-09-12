@@ -11,8 +11,7 @@ import {WindowRef} from '../../services/windowRef';
 export class ProductsComponent implements OnInit {
   window: WindowRef;
   // database for sorting
-  /*public items = [
-    {'price': 18, 'title': 'blouse'},
+  /*public items = [{'price': 18, 'title': 'blouse'},
     {'price': 13, 'title': 'coat'},
     {'price': 28, 'title': 'shirt'},
     {'price': 17, 'title': 'shoes'},
@@ -32,10 +31,13 @@ export class ProductsComponent implements OnInit {
       }).catch(function (error) {
       console.log(error);
     });
-    // sorting items
-    /*this.display = this.items.sort((a, b) => b.price - a.price);*/
   }
+  // scroll to top
   goBack(): void {
     this.window.nativeWindow.scrollTo(0, 0);
   }
+ /* // sorting items
+  sortType(): any {
+    this.display = this.items.sort((a, b) => b.price - a.price);
+  }*/
 }

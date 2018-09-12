@@ -4,12 +4,12 @@
   </h1>
     <div class="central">
       <div class="form-group">
-        <input type="text" [(ngModel)]="Login" name="Login" class="form-control" id="exampleInputEmail1"
-               aria-describedby="emailHelp" placeholder="Login">
+        <input type="text" name="Login" class="form-control" id="exampleInputEmail1"
+               aria-describedby="emailHelp" placeholder="Login" [(ngModel)]="Login">
       </div>
       <div class="form-group">
-        <input [(ngModel)]="Password" type="password" name="Password" class="form-control" id="exampleInputPassword1"
-               placeholder="Password">
+        <input type="password" name="Password" class="form-control" id="exampleInputPassword1"
+               placeholder="Password" formControlName="password" [(ngModel)]="Password">
       </div>
       <button type="submit" class="btn btn-primary main-button">
         Sign In

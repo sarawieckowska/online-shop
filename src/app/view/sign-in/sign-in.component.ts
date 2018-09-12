@@ -15,17 +15,17 @@ export class SignInComponent implements OnInit {
   login() {
     this.http.post(config.default.mantle.login, {login: this.Login, password: this.Password}).toPromise()
       .then(function (response) {
-      console.log(response);
-    }).catch(function (error) {
+        console.log(response);
+      }).catch(function (error) {
       console.log(error);
     });
     console.log('cokolwiek');
   }
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient)
+  {}
 
-  ngOnInit() {
-  }
+ngOnInit() {
+}
 
 }

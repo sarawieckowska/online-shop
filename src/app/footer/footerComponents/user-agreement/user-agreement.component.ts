@@ -12,7 +12,6 @@ import { ScrollToElementDirective } from '../../../directives/scroll-to-element.
 export class UserAgreementComponent implements OnInit {
   window: WindowRef;
   agreement: any;
-  selected: string;
 
   constructor(private injector: Injector) {
     this.window = new WindowRef();

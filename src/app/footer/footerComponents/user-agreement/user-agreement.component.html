@@ -22,7 +22,7 @@
   <div class="row">
     <ol class="list-elements">
       <li *ngFor="let item of agreement">
-        <h5>{{item.title}}</h5>
+        <h5 id="{{item.name}}">{{item.title}}</h5>
         <p>{{ item.paragraph }}</p>
         <p>{{ item.paragraph1 }}</p>
         <p>{{ item.paragraph2 }}</p>
