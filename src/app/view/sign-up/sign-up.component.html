@@ -1,43 +1,40 @@
-<form>
+<form (submit)="register()" class="needs-validation" novalidate>
   <h1 class="ta-center">
     Sign Up
   </h1>
     <div class="central">
       <div class="form-group row">
         <div class="col-sm-12">
-          <input type="text" class="form-control" placeholder="First name">
+          <input type="text" class="form-control" placeholder="First name" required [(ngModel)]="Name">
+        </div>
+        <div class="invalid-feedback">
+          Please provide your first name.
         </div>
       </div>
       <div class="form-group row">
         <div class="col-sm-12">
-          <input type="text" class="form-control" placeholder="Last name">
+          <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required [(ngModel)]="Email">
         </div>
-      </div>
-      <div class="form-group row">
-        <div class="col-sm-12">
-          <input type="text" class="form-control" placeholder="Login" aria-label="Username">
-        </div>
-      </div>
-      <div class="form-group row">
-        <div class="col-sm-12">
-          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+        <div class="invalid-feedback">
+          Please provide your email address.
         </div>
       </div>
       <div class="form-group row">
         <div class="col-sm-12">
           <input type="password" class="form-control" placeholder="Password" aria-describedby="passwordHelpBlock"
                  data-toggle="tooltip" data-placement="right" title="Your password must be at least 8 characters long
-                 and has to contain letters and numbers.">
+                 and has to contain letters and numbers." required [(ngModel)]="Password">
         </div>
-      </div>
-      <div class="form-group row">
-        <div class="col-sm-12">
-          <input type="password" class="form-control" placeholder="Repeat password">
+        <div class="invalid-feedback">
+          Please provide the password.
         </div>
       </div>
       <p>
         By creating an account you agree to our <a routerLink="/policies" class="color-font">Terms & Privacy</a>.
       </p>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
       <div class="form-group row">
         <div class="col-sm-12">
           <button type="submit" class="btn btn-primary main-button">

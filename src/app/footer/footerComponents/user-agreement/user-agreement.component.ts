@@ -1,13 +1,12 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { WindowRef } from '../../../services/windowRef';
 import { Agreement } from '../../../services/Agreement';
-import { ScrollToElementDirective } from '../../../directives/scroll-to-element.directive';
 
 @Component({
   selector: 'app-user-agreement',
   templateUrl: './user-agreement.component.html',
   styleUrls: ['./user-agreement.component.scss'],
-  providers: [Agreement, ScrollToElementDirective]
+  providers: [Agreement]
 })
 export class UserAgreementComponent implements OnInit {
   window: WindowRef;

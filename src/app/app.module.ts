@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -16,7 +16,6 @@ import { FooterComponent } from './footer/footer.component';
 import { AppBootstrapModule } from './AppBootstrapModule';
 import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ScrollToElementDirective } from './directives/scroll-to-element.directive';
 import { FirstHeaderComponent } from './header/first-header/first-header.component';
 
 @NgModule({
@@ -39,8 +38,7 @@ import { FirstHeaderComponent } from './header/first-header/first-header.compone
     CookiesComponent,
     FooterComponent,
     HeaderComponent,
-    ScrollToElementDirective,
-    FirstHeaderComponent,
+    FirstHeaderComponent
   ],
   bootstrap: [AppComponent]
 })

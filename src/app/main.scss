@@ -35,6 +35,10 @@ textarea {
   font-size: $list-font;
 }
 
+.medium-font {
+  font-size: $p-font;
+}
+
 .paragraph-font {
   font-size: $header-6-font;
 }
@@ -75,6 +79,10 @@ textarea {
 
 .ta-left {
   text-align: left;
+}
+
+.ta-right {
+  text-align: right;
 }
 
 .help-margin {

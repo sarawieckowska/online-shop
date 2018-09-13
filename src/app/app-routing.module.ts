@@ -30,7 +30,8 @@ const routes: Routes = [
   { path: 'basket', component: BasketComponent },
   { path: 'home', component: HomeComponent },
   { path: 'products', component: ProductsComponent },
-  { path: 'account-details', component: AccountDetailsComponent }
+  { path: 'account-details', component: AccountDetailsComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({

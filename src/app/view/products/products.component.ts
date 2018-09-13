@@ -1,28 +1,24 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { Products } from '../../services/Products';
-import {WindowRef} from '../../services/windowRef';
+import { WindowRef } from '../../services/windowRef';
+import { BasketService } from '../../services/Basket';
+import { IProduct } from '../../interfaces/products';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss'],
-  providers: [Products]
+  providers: [BasketService]
 })
 export class ProductsComponent implements OnInit {
   window: WindowRef;
-  // database for sorting
-  /*public items = [{'price': 18, 'title': 'blouse'},
-    {'price': 13, 'title': 'coat'},
-    {'price': 28, 'title': 'shirt'},
-    {'price': 17, 'title': 'shoes'},
-    {'price': 38, 'title': 'watch'}];
-  public display: any = [];*/
   products: any;
-  constructor(private injector: Injector) {
+  constructor(private injector: Injector, private basketService: BasketService) {
     this.window = new WindowRef();
   }
 
   ngOnInit() {
+    // products backend
     const self = this;
     const products = this.injector.get(Products);
     products.getProducts()
@@ -33,11 +29,21 @@ export class ProductsComponent implements OnInit {
     });
   }
   // scroll to top
-  goBack(): void {
-    this.window.nativeWindow.scrollTo(0, 0);
-  }
- /* // sorting items
-  sortType(): any {
-    this.display = this.items.sort((a, b) => b.price - a.price);
-  }*/
-}
+    goBack(): void {
+      this.window.nativeWindow.scrollTo(0, 0);
+    }
+    addItemToBasket(product: IProduct): void {
+      this.basketService.add(product);
+    }
+  // sorting items
+    mostPopular(): any {
+    this.products.sort(function() {
+      return 0.5 - Math.random();
+    });
+    }
+    lowestPrice(): any {
+      this.products.sort((a, b) => a.price - b.price);
+    }
+    highestPrice(): any {
+    this.products.sort((a, b) => b.price - a.price);
+}}

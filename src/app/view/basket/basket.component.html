@@ -3,8 +3,16 @@
     SHOPPING BASKET
   </h5>
   <div class="border-basket center">
-    <p class="paragraph-font">
+    <!--<p class="paragraph-font">
       Your shopping basket is empty.
-    </p>
+    </p>-->
+    <div *ngFor="let item of products" class="sortProducts">
+      <h5>
+        {{item.title}}, £{{item.price}}
+      </h5>
+    </div>
   </div>
+  <button (click)="goBack()" class="btn btn-outline-success my-2 my-sm-0 main-button back-button" type="submit">
+    BACK TO TOP
+  </button>
 </div>
