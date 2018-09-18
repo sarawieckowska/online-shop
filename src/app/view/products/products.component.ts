@@ -34,6 +34,7 @@ export class ProductsComponent implements OnInit {
       this.window.nativeWindow.scrollTo(0, 0);
     }
     addItemToBasket(product: IProduct): void {
+      product.inBasket = true;
       this.basketService.add(product);
     }
   // sorting items

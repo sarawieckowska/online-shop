@@ -56,7 +56,7 @@
         <button *ngIf="item.added" class="btn main-button">
           Remove
         </button>
-        <button  *ngIf="!item.added" (click)="addItemToBasket(item)" class="btn main-button">
+        <button  *ngIf="!item.inBasket" (click)="addItemToBasket(item)" class="btn main-button">
           Add to basket
         </button>
       </div>

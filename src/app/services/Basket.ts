@@ -6,7 +6,7 @@ import { IProduct } from '../interfaces/products';
   providedIn: 'root'
 })
 export class BasketService {
-  basket: IBasket;
+  basket: IBasket = { products: [] };
   getBasket() {
     return this.basket;
   }

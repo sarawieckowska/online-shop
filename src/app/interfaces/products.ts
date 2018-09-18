@@ -4,4 +4,5 @@ export interface IProduct {
     title: string;
     description: string;
     gender: string;
+    inBasket: boolean;
 }

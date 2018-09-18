@@ -2,7 +2,7 @@ import { Component, OnInit, Injector } from '@angular/core';
 import { Products } from '../../services/Products';
 import { WindowRef } from '../../services/windowRef';
 import { BasketService } from '../../services/Basket';
-import { IProduct } from '../../interfaces/products';
+import {IProduct} from '../../interfaces/products';
 
 @Component({
   selector: 'app-basket',
@@ -12,26 +12,17 @@ import { IProduct } from '../../interfaces/products';
 })
 export class BasketComponent implements OnInit {
   window: WindowRef;
-  products: any;
+  products: Array<IProduct>;
   constructor(private injector: Injector, private basketService: BasketService) {
     this.window = new WindowRef();
   }
   ngOnInit() {
-    // products backend
     const self = this;
-    const products = this.injector.get(Products);
-    products.getProducts()
-      .then(function (response) {
-        self.products = response;
-      }).catch(function (error) {
-      console.log(error);
-    });
+    self.products = this.basketService.getBasket().products;
+    console.log(self);
   }
   // scroll to top
   goBack(): void {
     this.window.nativeWindow.scrollTo(0, 0);
-  }
-  addItemToBasket(product: IProduct): void {
-    this.basketService.add(product);
   }
 }
