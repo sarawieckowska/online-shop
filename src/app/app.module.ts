@@ -7,8 +7,6 @@ import { AppComponent } from './app.component';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 
-import { HistoryComponent } from './view/history/history.component';
-import { PaymentComponent } from './view/payment/payment.component';
 import { MyAccountComponent } from './view/my-account/my-account.component';
 import { CategoriesComponent } from './view/categories/categories.component';
 import { CookiesComponent } from './footer/footerComponents/cookies/cookies.component';
@@ -17,6 +15,8 @@ import { AppBootstrapModule } from './AppBootstrapModule';
 import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FirstHeaderComponent } from './header/first-header/first-header.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { LoggedComponent } from './view/logged/logged.component';
 
 @NgModule({
   imports: [
@@ -31,14 +31,14 @@ import { FirstHeaderComponent } from './header/first-header/first-header.compone
   declarations: [
     AppComponent,
     routingComponents,
-    HistoryComponent,
-    PaymentComponent,
     MyAccountComponent,
     CategoriesComponent,
     CookiesComponent,
     FooterComponent,
     HeaderComponent,
-    FirstHeaderComponent
+    FirstHeaderComponent,
+    FilterPipe,
+    LoggedComponent
   ],
   bootstrap: [AppComponent]
 })

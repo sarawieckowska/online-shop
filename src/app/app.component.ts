@@ -1,4 +1,4 @@
-import { Component, Injector, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from './services/AuthService';
 import { User } from './models/User';
 
@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
     this.isAccepted = accepted;
   }
 
-  constructor(private injector: Injector) {}
+  constructor() {}
 
   ngOnInit() {
     this.isAccepted = false;

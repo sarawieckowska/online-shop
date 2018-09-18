@@ -26,5 +26,4 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this._search = this.injector.get(Search);
   }
-
 }

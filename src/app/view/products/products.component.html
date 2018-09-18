@@ -4,34 +4,62 @@
       Products
     </h2>
   </div>
-  <div class="ta-right">
+  <div class="col-12 mt-header paragraph-font ta-center">
+    <div class="inline-block">
+      <a class="black-text" (click)="showMen()">
+        Men
+      </a>
+    </div>
+    <div class="inline-block pl-products">
+      <a class="black-text" (click)="showWomen()">
+        Women
+      </a>
+    </div>
+    <div class="inline-block pl-products">
+      <a class="black-text" (click)="showAll()">
+        Show me all
+      </a>
+    </div>
+  </div>
+  <div>
+    <p class="form-check form-check-inline">
+      Sort by:
+    </p>
     <div class="form-check form-check-inline" (click)="mostPopular()">
       <input class="form-check-input" checked="" type="radio" name="inlineRadioOptions" id="inlineRadio0" value="Most popular">
-      <label class="form-check-label header-font active" for="inlineRadio0">Most popular</label>
+      <label class="form-check-label header-font active" for="inlineRadio0">
+        Most popular
+      </label>
     </div>
     <div class="form-check form-check-inline" (click)="lowestPrice()">
       <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Lowest price">
-      <label class="form-check-label header-font" for="inlineRadio1">Lowest price</label>
+      <label class="form-check-label header-font" for="inlineRadio1">
+        Lowest price
+      </label>
     </div>
     <div class="form-check form-check-inline" (click)="highestPrice()">
       <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Highest price">
-      <label class="form-check-label header-font" for="inlineRadio2">Highest price</label>
+      <label class="form-check-label header-font" for="inlineRadio2">
+        Highest price
+      </label>
     </div>
   </div>
   <div *ngFor="let item of products" class="sortProducts">
-    <h5>
-      {{item.title}}, £{{item.price}}
-    </h5>
-    <p class="medium-font central">
-      {{item.description}}
-    </p>
-    <div class="center mt-add">
-      <button *ngIf="item.added" (click)="removeProduct(item)" class="btn main-button">
-        Remove
-      </button>
-      <button  *ngIf="!item.added" (click)="addItemToBasket(item)" class="btn main-button">
-        Add to basket
-      </button>
+    <div *ngIf="item.gender === productGender">
+      <h5>
+        {{item.title}}, £{{item.price}}
+      </h5>
+      <p class="medium-font central">
+        {{item.description}}
+      </p>
+      <div class="center mt-add">
+        <button *ngIf="item.added" class="btn main-button">
+          Remove
+        </button>
+        <button  *ngIf="!item.added" (click)="addItemToBasket(item)" class="btn main-button">
+          Add to basket
+        </button>
+      </div>
     </div>
   </div>
   <button (click)="goBack()" class="btn btn-outline-success my-2 my-sm-0 main-button back-button" type="submit">

@@ -13,6 +13,7 @@ import { IProduct } from '../../interfaces/products';
 export class ProductsComponent implements OnInit {
   window: WindowRef;
   products: any;
+  public productGender = '';
   constructor(private injector: Injector, private basketService: BasketService) {
     this.window = new WindowRef();
   }
@@ -46,4 +47,15 @@ export class ProductsComponent implements OnInit {
     }
     highestPrice(): any {
     this.products.sort((a, b) => b.price - a.price);
-}}
+    }
+  // filter items
+    showMen() {
+      this.productGender = 'men';
+    }
+    showWomen() {
+      this.productGender = 'women';
+    }
+    showAll() {
+      this.productGender = 'men || women';
+    }
+}
