@@ -37,6 +37,10 @@ export class ProductsComponent implements OnInit {
       product.inBasket = true;
       this.basketService.add(product);
     }
+    removeFromBasket(product: IProduct): void {
+    product.inBasket = false;
+    this.basketService.add(product);
+  }
   // sorting items
     mostPopular(): any {
     this.products.sort(function() {

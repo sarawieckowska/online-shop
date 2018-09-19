@@ -53,7 +53,7 @@
         {{item.description}}
       </p>
       <div class="center mt-add">
-        <button *ngIf="item.added" class="btn main-button">
+        <button *ngIf="item.inBasket" (click)="removeFromBasket(item)" class="btn main-button">
           Remove
         </button>
         <button  *ngIf="!item.inBasket" (click)="addItemToBasket(item)" class="btn main-button">
