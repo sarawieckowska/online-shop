@@ -43,15 +43,15 @@ export class ProductsComponent implements OnInit {
   }
   // sorting items
     mostPopular(): any {
-    this.products.sort(function() {
-      return 0.5 - Math.random();
+      this.products.sort(function() {
+        return 0.5 - Math.random();
     });
     }
     lowestPrice(): any {
       this.products.sort((a, b) => a.price - b.price);
     }
     highestPrice(): any {
-    this.products.sort((a, b) => b.price - a.price);
+      this.products.sort((a, b) => b.price - a.price);
     }
   // filter items
     showMen() {
@@ -59,8 +59,5 @@ export class ProductsComponent implements OnInit {
     }
     showWomen() {
       this.productGender = 'women';
-    }
-    showAll() {
-      this.productGender = 'men || women';
     }
 }

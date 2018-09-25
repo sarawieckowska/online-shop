@@ -13,7 +13,7 @@
   </div>
   <div class="col-4 mt-header">
     <input type="search" class="form-control form-control-sm inline-block"
-           [(ngModel)]="searchText" placeholder="Search for products">
+           [(ngModel)]="searchText && model" placeholder="Search for products" [ngbTypeahead]="searchAhead">
     <span class="padding-search">
       <button (click)="search(searchText)" class="btn btn-sm main-button inline-block" type="submit">
         Search

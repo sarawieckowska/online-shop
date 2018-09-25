@@ -1,43 +1,50 @@
-<form (submit)="register()" class="needs-validation" novalidate>
+<form (submit)="register()" [formGroup]="registerForm">
   <h1 class="ta-center">
     Sign Up
   </h1>
     <div class="central">
       <div class="form-group row">
         <div class="col-sm-12">
-          <input type="text" class="form-control" placeholder="First name" required [(ngModel)]="Name" name="name">
-        </div>
-        <div class="invalid-feedback">
-          Please provide your first name.
-        </div>
-      </div>
-      <div class="form-group row">
-        <div class="col-sm-12">
-          <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required [(ngModel)]="Email" name="email">
-        </div>
-        <div class="invalid-feedback">
-          Please provide your email address.
+          <input type="text" class="form-control" placeholder="First name" name="firstName" [(ngModel)]="FirstName"
+                 [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" formControlName="firstName">
+          <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+            <div *ngIf="f.firstName.errors.required">
+              First name is required
+            </div>
+          </div>
         </div>
       </div>
       <div class="form-group row">
         <div class="col-sm-12">
-          <input type="password" class="form-control" placeholder="Password" aria-describedby="passwordHelpBlock"
-                 data-toggle="tooltip" data-placement="right" title="Your password must be at least 8 characters long
-                 and has to contain letters and numbers." required [(ngModel)]="Password" name="password">
+          <input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="email" [(ngModel)]="Email"
+                 [ngClass]="{ 'is-invalid': submitted && f.email.errors }" formControlName="email">
+          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">
+              Email is required
+            </div>
+          </div>
         </div>
-        <div class="invalid-feedback">
-          Please provide the password.
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-12">
+          <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="Password"
+                 [ngClass]="{ 'is-invalid': submitted && f.password.errors }" formControlName="password">
+          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">
+              Password is required
+            </div>
+            <div *ngIf="f.password.errors.minlength">
+              Password must be at least 6 characters
+            </div>
+          </div>
         </div>
       </div>
       <p>
         By creating an account you agree to our <a routerLink="/policies" class="color-font">Terms & Privacy</a>.
       </p>
-      <div class="invalid-feedback">
-        You must agree before submitting.
-      </div>
       <div class="form-group row">
         <div class="col-sm-12">
-          <button type="submit" class="btn btn-primary main-button" (click)="validator()">
+          <button type="submit" class="btn btn-primary main-button" (click)="signIn()">
             Sign up
           </button>
         </div>
