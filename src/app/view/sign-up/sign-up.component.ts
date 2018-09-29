@@ -17,7 +17,7 @@ export class SignUpComponent implements OnInit {
   Password: string;
   registerForm: FormGroup;
   submitted = false;
-  constructor(private http: HttpClient,
+  constructor(public http: HttpClient,
               private formBuilder: FormBuilder,
               public authService: AuthService,
               public router: Router) { }
@@ -39,7 +39,7 @@ export class SignUpComponent implements OnInit {
       }).catch(function (error) {
       console.log(error);
     });
-    console.log('cokolwiek');
+    console.log('Registering...');
     this.submitted = true;
     // stop here if form is invalid
     if (this.registerForm.invalid) {

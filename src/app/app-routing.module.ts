@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { SignInComponent } from './view/sign-in/sign-in.component';
 import { SignUpComponent } from './view/sign-up/sign-up.component';
 import { CompanyInfoComponent } from './footer/footerComponents/company-info/company-info.component';
@@ -15,6 +14,7 @@ import { BasketComponent } from './view/basket/basket.component';
 import { HomeComponent } from './view/home/home.component';
 import { ProductsComponent } from './view/products/products.component';
 import { AccountDetailsComponent } from './view/account-details/account-details.component';
+import { AuthGuard } from './services/auth-guard.service';
 
 const routes: Routes = [
   { path: 'login', component: SignInComponent },
@@ -27,10 +27,10 @@ const routes: Routes = [
   { path: 'return-policy', component: ReturnPolicyComponent },
   { path: 'delivery-methods', component: DeliveryMethodsComponent },
   { path: 'contact-us', component: ContactUsComponent },
-  { path: 'basket', component: BasketComponent },
+  { path: 'basket', component: BasketComponent, canActivate: [AuthGuard] },
   { path: 'home', component: HomeComponent },
   { path: 'products', component: ProductsComponent },
-  { path: 'account-details', component: AccountDetailsComponent },
+  { path: 'account-details', component: AccountDetailsComponent, canActivate: [AuthGuard] },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 

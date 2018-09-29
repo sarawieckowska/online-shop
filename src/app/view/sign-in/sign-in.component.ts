@@ -21,10 +21,11 @@ export class SignInComponent implements OnInit {
   submitted = false;
   user: User;
   message: string;
-  constructor(private http: HttpClient,
+  constructor(public http: HttpClient,
               private formBuilder: FormBuilder,
               public authService: AuthService,
               public router: Router) {
+    this.setMessage();
   }
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
@@ -34,6 +35,9 @@ export class SignInComponent implements OnInit {
   }
   // convenience getter for easy access to form fields
   get f() { return this.loginForm.controls; }
+  setMessage() {
+    this.message = 'Logged ' + (this.authService.isSignedIn ? 'in' : 'out');
+  }
   // on submit
   login() {
     this.http.post(config.default.mantle.login, {email: this.Email, password: this.Password}).toPromise()
@@ -42,7 +46,7 @@ export class SignInComponent implements OnInit {
       }).catch(function (error) {
       console.log(error);
     });
-    console.log('cokolwiek');
+    console.log('Logging in...');
     this.submitted = true;
 
     // stop here if form is invalid
@@ -54,6 +58,7 @@ export class SignInComponent implements OnInit {
     this.message = 'Logging in...';
 
     this.authService.signIn().subscribe(() => {
+      this.setMessage();
       if (this.authService.isSignedIn) {
         // Get the redirect URL from our auth service
         // If no redirect has been set, use the default
@@ -73,5 +78,6 @@ export class SignInComponent implements OnInit {
   }
   logout() {
     this.authService.logout();
+    this.setMessage();
   }
 }
