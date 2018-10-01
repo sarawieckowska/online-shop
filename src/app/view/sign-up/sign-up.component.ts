@@ -39,7 +39,7 @@ export class SignUpComponent implements OnInit {
       }).catch(function (error) {
       console.log(error);
     });
-    console.log('Registering...');
+    console.log('Registering.');
     this.submitted = true;
     // stop here if form is invalid
     if (this.registerForm.invalid) {

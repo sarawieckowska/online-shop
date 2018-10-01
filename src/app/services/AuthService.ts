@@ -19,10 +19,10 @@ export class AuthService {
     );
   }
   logout(): void {
-    this.isSignedIn = false;
+    delete localStorage.token;
   }
   isLoggedIn: any = () => {
-    return true;
+    return localStorage.token && localStorage.token.length;
   }
   getUser: any = () => {
     return this.User;

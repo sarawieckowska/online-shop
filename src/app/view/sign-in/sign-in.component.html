@@ -21,11 +21,8 @@
         </div>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary main-button" (click)="signIn()" *ngIf="!authService.isSignedIn">
+    <button type="submit" class="btn btn-primary main-button" (click)="signIn()">
       Sign In
-    </button>
-    <button type="submit" class="btn btn-primary main-button" (click)="logout()" *ngIf="authService.isSignedIn">
-      Log out
     </button>
     <div>
       <p>

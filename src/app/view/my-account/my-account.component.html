@@ -10,7 +10,7 @@
     <div class="drop">
       <ul *dropdownMenu class="dropdown-menu">
         <li class="dropdownElem">
-          <a routerLink="/login" routerLinkActive="active" class="account-style">
+          <a routerLink="/login" *ngIf="!isUserAuthenticated()" routerLinkActive="active" class="account-style">
             Login
           </a>
         </li>
@@ -22,6 +22,11 @@
         <li class="dropdownElem">
           <a routerLink="/account-details" routerLinkActive="active" class="account-style">
             Account Details
+          </a>
+        </li>
+        <li class="dropdownElem">
+          <a *ngIf="isUserAuthenticated()" class="account-style header-style" (click)="logout()">
+            Logout
           </a>
         </li>
       </ul>

@@ -41,12 +41,12 @@ export class SignInComponent implements OnInit {
   // on submit
   login() {
     this.http.post(config.default.mantle.login, {email: this.Email, password: this.Password}).toPromise()
-      .then(function (response) {
-        console.log(response);
+      .then(function (response: any) {
+        localStorage.token = response.token;
       }).catch(function (error) {
       console.log(error);
     });
-    console.log('Logging in...');
+    console.log('Logging in.');
     this.submitted = true;
 
     // stop here if form is invalid
@@ -60,9 +60,9 @@ export class SignInComponent implements OnInit {
     this.authService.signIn().subscribe(() => {
       this.setMessage();
       if (this.authService.isSignedIn) {
-        // Get the redirect URL from our auth service
+        // Get the redirect URL from auth service
         // If no redirect has been set, use the default
-        const redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/account-details';
+        const redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/basket';
 
         // Set our navigation extras object
         // that passes on our global query params and fragment
@@ -75,9 +75,5 @@ export class SignInComponent implements OnInit {
         this.router.navigate([redirect], navigationExtras);
       }
     });
-  }
-  logout() {
-    this.authService.logout();
-    this.setMessage();
   }
 }
